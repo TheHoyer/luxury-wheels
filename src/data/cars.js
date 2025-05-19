@@ -309,7 +309,7 @@ const CARS_DATA = [
     make: "Mercedes-AMG",
     model: "G63 Black",
     // year: undefined, // Rok produkcji nie został podany
-    imageUrl: "/images/MercedesG63Black/mercedes-amg-g63-black-bok.jpg", // Główne zdjęcie - widok z boku
+    imageUrl: "/images/MercedesG63Black/Mercedes-AMG-G63-sylwetka.jpg.jpg", // Główne zdjęcie - widok z boku
     logoUrl: "/images/MercedesG63Black/mercedes-amg.svg", // Logo marki w folderze modelu
     specHighlights: {
       power: "585 KM",
@@ -373,8 +373,6 @@ const CARS_DATA = [
       ]
     }
   },
-// --- DODAJ KOLEJNE SAMOCHODY TUTAJ ---
-// --- DODAJ KOLEJNE SAMOCHODY TUTAJ ---
 
   
     // --- KONIEC DANYCH ---
