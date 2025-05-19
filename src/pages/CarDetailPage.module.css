@@ -1,0 +1,62 @@
+.carDetailPage{background-color:#fff}
+.fullWidthSection{padding:3rem 0}
+.titleSection{padding:2rem 0;background-color:#f9f9f9;border-bottom:1px solid #eee}
+.carTitle{text-align:center;margin-bottom:0;font-size:2.8rem;color:#222;font-weight:700}
+.gallerySection{padding:0;margin-bottom:3rem;position:relative;background-color:#f0f0f0}
+.mainSliderWrapper{margin:0 auto;position:relative;}
+.slideWrapper{display:flex;justify-content:center;align-items:center;outline:none;border:none;min-height:60vh;overflow:hidden}
+.galleryImage{width:100%; height:auto;max-height:80vh; object-fit:cover; display:block;margin:0 auto;border-radius:0}
+.customDots{position:absolute;bottom:25px; left:0;width:100%;padding:0;margin:0;list-style:none;text-align:center;z-index:5}
+.customDots li{position:relative;display:inline-block;width:12px;height:12px;margin:0 7px;padding:0;cursor:pointer}
+.customDots li button{font-size:0;line-height:0;display:block;width:12px;height:12px;padding:0;cursor:pointer;color:transparent;border:1px solid #fff;outline:0;background:rgba(255,255,255,.5);border-radius:50%;transition:background .3s ease}
+.customDots li button:focus,.customDots li button:hover{outline:0}
+.customDots li.slick-active button{background:#fff}
+.customDots li button:before{content:none}
+.specsHighlightSection{padding:3rem 0}
+.sectionTitle{font-size:2rem;margin-bottom:2rem;padding-bottom:.7rem;border-bottom:2px solid #eee;color:#333;text-align:center;font-weight:600}
+.subSectionTitle{font-size:1.6rem;margin-bottom:1.5rem;color:#444;font-weight:600;text-align:center}
+.specsGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.5rem}
+.specItem{background-color:#f9f9f9;padding:1.2rem 1rem;border-radius:8px;border:1px solid #eee;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .2s ease,box-shadow .2s ease}
+.specItem:hover{transform:translateY(-3px);box-shadow:0 3px 8px rgba(0,0,0,.08)}
+.specIcon{font-size:2em;color:var(--color-accent);margin-bottom:.7rem;transition:transform .3s ease}
+.specItem:hover .specIcon{transform:scale(1.1)}
+.specLabel{font-size:.9em;color:#777;margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.5px}
+.specValue{font-size:1.3em;font-weight:700;color:#333;margin-top:.2rem}
+.descriptionEquipmentSection{background-color:#fdfdfd;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.descriptionTextContainer{margin-bottom:3rem}
+.descriptionTextContainer .sectionTitle,.equipmentSection .subSectionTitle{text-align:left}
+.descriptionText{line-height:1.9;color:#444;text-align:justify;font-size:1.05rem}
+.equipmentSection{margin-top:2rem}
+.equipmentList{list-style:none;padding:0;margin:0;column-count:2;column-gap:2rem}
+.equipmentList li{padding:.5rem 0;display:flex;align-items:center;color:#333;font-size:.95rem;break-inside:avoid-column}
+.equipmentIcon{color:var(--color-accent);margin-right:.8rem;font-size:1.2em;flex-shrink:0}
+.pricingGallerySection{padding:3rem 0}
+.pricingWrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.5rem;margin-bottom:2.5rem}
+.pricingOption{border:1px solid #ddd;border-radius:8px;padding:1.5rem;background-color:#fff;transition:box-shadow .3s ease}
+.pricingOption:hover{box-shadow:0 4px 10px rgba(0,0,0,.08)}
+.pricingOption h4{font-size:1.3rem;color:var(--color-accent);margin:-1.5rem -1.5rem 1rem -1.5rem;padding:1rem 1.5rem;text-align:center;border-bottom:1px solid #ddd;background-color:#f9f9f9;border-radius:8px 8px 0 0}
+.depositInfo{font-size:1rem;text-align:center;margin-bottom:1rem;color:#555}
+.pricingTiers{list-style:none;padding:0;margin:0}
+.pricingTiers li{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0;border-bottom:1px solid #eee;gap:1rem}
+.pricingTiers li:last-child{border-bottom:none}
+.pricingTiers span{color:#555;flex-shrink:0}
+.pricingTiers strong{color:#333;font-size:1.1em;font-weight:700;text-align:right}
+.mileageSection{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ddd}
+.mileageList{list-style:none;padding:0;margin:0;column-count:2;column-gap:2rem}
+.mileageList li{margin-bottom:.5rem;color:#444;font-size:.9rem}
+.mileageList strong{color:#333}
+.vatInfo{font-size:.85em;color:#777;margin-top:1.5rem;text-align:center}
+.thumbnailGallery{margin-top:3rem;padding-top:2rem;border-top:1px solid #eee}
+.thumbnailGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.thumbnailWrapper{border-radius:4px;overflow:hidden;border:2px solid transparent;cursor:pointer;transition:border-color .3s ease,transform .3s ease,box-shadow .3s ease;position:relative}
+.thumbnailWrapper:hover{border-color:var(--color-accent);transform:scale(1.03);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.thumbnailImage{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.actionButtons{display:flex;justify-content:center;gap:1.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #eee}
+.bookingButton,.backButton{padding:.9rem 2rem;border-radius:5px;text-decoration:none;font-weight:700;transition:background-color .3s ease,color .3s ease,transform .2s ease,box-shadow .3s ease;font-size:1.05rem;text-align:center;border:none}
+.bookingButton{background-color:var(--color-accent);color:var(--color-header-scrolled)}
+.bookingButton:hover{background-color:var(--color-accent-hover);color:#000;transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.2)}
+.backButton{background-color:#ccc;color:#333}
+.backButton:hover{background-color:#bbb;transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.1)}
+@media (max-width:992px){.equipmentList,.mileageList{column-count:1}.thumbnailGrid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+@media (max-width:768px){.carTitle{font-size:2.2rem}.sectionTitle{font-size:1.7rem}.subSectionTitle{font-size:1.4rem}.pricingWrapper{grid-template-columns:1fr}.thumbnailGrid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.5rem}}
+@media (max-width:576px){.specsGrid{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.specItem{padding:.8rem .5rem}.specValue{font-size:1.1em}.equipmentList li{font-size:.9rem}.pricingTiers li{flex-direction:column;align-items:flex-start;gap:.2rem}.pricingTiers strong{font-size:1em;text-align:left}.thumbnailGrid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}}
