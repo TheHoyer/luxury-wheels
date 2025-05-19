@@ -374,6 +374,230 @@ const CARS_DATA = [
     }
   },
 
+  {
+    id: 6, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    make: "Mercedes-AMG",
+    model: "G63 Brown",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/MercedesG63Brown/Mercedes-G63-Brown-sylwetka.jpg", // Główne zdjęcie - widok z boku (może wymagać zmiany)
+    logoUrl: "/images/MercedesG63Brown/mercedes-amg.svg", // Logo marki
+    specHighlights: {
+      power: "585 KM",
+      acceleration: "4,5 s",
+      gearbox: "Automatyczna AMG SPEEDSHIFT TCT 9G",
+      drive: "4x4",
+      engineType: "4.0L V8 Biturbo",
+      maxSpeed: "220 km/h",
+    },
+    description: `Historia Mercedesa klasy G sięga 1969 roku. Ideą powstania G klasy było połączenie terenowych zdolności z odpowiednim poziomem komfortu. Obecnie to SUV klasy wyższej, który stał się luksusowy, bardzo mocny i jedyny w swoim rodzaju. \n\nNasz egzemplarz to najmocniejsza wersja G63 z 4-litrowym silnikiem V8 Biturbo o mocy 585 KM. Ten 2.6-tonowy kolos rozpędza się do 100 km/h w zaledwie 4.5 sekundy. Najnowsza generacja W483 wyróżnia się rewelacyjnymi osiągami i poprawionym prowadzeniem oraz nowym poziomem luksusu i wykończenia wnętrza, szczególnie z “Pakietem wnętrza G manufaktur Plus” i “Pakietem Premium Plus”.\n\nNasz egzemplarz w brązowym lakierze z pewnością przyciąga uwagę. Jazda nim to wyjątkowe doświadczenie, które ciężko porównać do jakiegokolwiek innego auta!`,
+    technicalData: {
+      power: "585 KM",
+      torque: "brak danych", // Moment obrotowy nie został podany wprost w nowym opisie
+      acceleration: "4,5 s",
+      gearbox: "Automatyczna AMG SPEEDSHIFT TCT 9G",
+      drive: "4x4",
+      engineType: "4.0L V8 Biturbo",
+      maxSpeed: "220 km/h",
+    },
+    equipment: [
+      "Aktywny system utrzymywania pasa ruchu",
+      "Asystent martwego pola",
+      "System nagłośnieniowy Burmester 3D",
+      "Elektrycznie sterowane okno dachowe",
+      "Kamera 360 stopni",
+      "Pakiet night",
+      "Pakiet wnętrza G manufaktur Plus (podsufitka designo, deska rozdzielcza obszyta skórą)",
+      "Pakiet komfortowych siedzeń plus",
+      "Adaptacyjny tempomat Distronic",
+      "Oświetlenie ambiente (64 kolory)",
+    ],
+    galleryImages: [
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-przod.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-sylwetka.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-bok.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-tyl.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-linia.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-wnetrze.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-deska-rozdzielcza.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-felga.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-lampa-przod.jpg",
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-znaczek-1.jpg",
+      // Możesz dodać więcej linków do zdjęć, jeśli posiadasz
+    ],
+    pricing: {
+      deposit: 30000,
+      tiers: [
+        { duration: "1 doba", price: 3200 },
+        { duration: "2-3 doby", price: 2800 },
+        { duration: "4-6 dób", price: 2400 },
+        { duration: "7-13 dób", price: 1900 },
+        { duration: "14-29 dób", price: 1400 },
+        { duration: "Miesiąc", price: 29000 },
+      ],
+      mileage: [
+        { duration: "do 6 dni", limit: "150 km / doba" },
+        { duration: "od 7 do 13 dni", limit: "125 km / doba" },
+        { duration: "od 14 do 29 dni", limit: "100 km / doba" },
+        { duration: "od 30 dni", limit: "65 km / doba" },
+      ],
+      additionalMileageCost: 9, // Cena brutto
+      relocationFees: {
+        upTo7Days: 500, // Cena netto
+        over7Days: 0,
+      },
+    },
+  },
+  {
+    id: 7, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    make: "Mercedes-AMG",
+    model: "G63 Bordowy",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/MercedesG63Red/Mercedes-G63-Red-sylwetka.jpg", // Główne zdjęcie - widok z boku (może wymagać zmiany na bordowy)
+    logoUrl: "/images/MercedesG63Red/mercedes-amg.svg", // Logo marki
+    specHighlights: {
+      power: "585 KM",
+      acceleration: "4,5 s",
+      gearbox: "Automatyczna AMG SPEEDSHIFT TCT 9G",
+      drive: "4x4",
+      engineType: "4.0L V8 Biturbo",
+      maxSpeed: "220 km/h",
+    },
+    description: `Historia Mercedesa klasy G sięga 1969 roku. Ideą powstania G klasy było połączenie terenowych zdolności z odpowiednim poziomem komfortu. Obecnie to SUV klasy wyższej, który stał się luksusowy, bardzo mocny i jedyny w swoim rodzaju. \n\nNasz egzemplarz to najmocniejsza wersja G63 z 4-litrowym silnikiem V8 Biturbo o mocy 585 KM. Ten 2.6-tonowy kolos rozpędza się do 100 km/h w zaledwie 4.5 sekundy. Najnowsza generacja W483 wyróżnia się rewelacyjnymi osiągami i poprawionym prowadzeniem oraz nowym poziomem luksusu i wykończenia wnętrza, szczególnie z “Pakietem wnętrza G manufaktur Plus” i “Pakietem Premium Plus”.\n\nNasz egzemplarz w bordowym lakierze z pewnością przyciąga uwagę. Jazda nim to wyjątkowe doświadczenie, które ciężko porównać do jakiegokolwiek innego auta!`,
+    technicalData: {
+      power: "585 KM",
+      torque: "brak danych", // Moment obrotowy nie został podany wprost w nowym opisie
+      acceleration: "4,5 s",
+      gearbox: "Automatyczna AMG SPEEDSHIFT TCT 9G",
+      drive: "4x4",
+      engineType: "4.0L V8 Biturbo",
+      maxSpeed: "220 km/h",
+    },
+    equipment: [
+      "Aktywny system utrzymywania pasa ruchu",
+      "Asystent martwego pola",
+      "System nagłośnieniowy Burmester 3D",
+      "Elektrycznie sterowane okno dachowe",
+      "Kamera 360 stopni",
+      "Pakiet night",
+      "Pakiet wnętrza G manufaktur Plus (podsufitka designo, deska rozdzielcza obszyta skórą)",
+      "Pakiet komfortowych siedzeń plus",
+      "Adaptacyjny tempomat Distronic",
+      "Oświetlenie ambiente (64 kolory)",
+    ],
+    galleryImages: [
+      "/images/MercedesG63Red/Mercedes-G63-Red-przod.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-sylwetka.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-bok.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-tyl.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-linia.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-wnetrze.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-deska-rozdzielcza.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-felga.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-lampa-przod.jpg",
+      "/images/MercedesG63Red/Mercedes-G63-Red-znaczek-1.jpg",
+    ],
+    pricing: {
+      deposit: 30000,
+      tiers: [
+        { duration: "1 doba", price: 3200 },
+        { duration: "2-3 doby", price: 2800 },
+        { duration: "4-6 dób", price: 2400 },
+        { duration: "7-13 dób", price: 1900 },
+        { duration: "14-29 dób", price: 1400 },
+        { duration: "Miesiąc", price: 29000 },
+      ],
+      mileage: [
+        { duration: "do 6 dni", limit: "150 km / doba" },
+        { duration: "od 7 do 13 dni", limit: "125 km / doba" },
+        { duration: "od 14 do 29 dni", limit: "100 km / doba" },
+        { duration: "od 30 dni", limit: "65 km / doba" },
+      ],
+      additionalMileageCost: 9, // Cena brutto
+      relocationFees: {
+        upTo7Days: 500, // Cena netto
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 8, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    make: "Mercedes-AMG",
+    model: "GT 63 SE",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-sylwetka.jpg", // Główne zdjęcie - może wymagać doprecyzowania
+    logoUrl: "/images/MercedesAMG_GT63SE/mercedes-amg.svg", // Logo marki
+    specHighlights: {
+      power: "843 KM",
+      acceleration: "2,9 s",
+      gearbox: "Automatyczna",
+      drive: "4x4 4Matic",
+      engineType: "4.0L V8 BiTurbo Hybryda",
+      maxSpeed: "316 km/h",
+    },
+    description: `Mercedes-AMG GT to perła w koronie samochodów AMG. Model GT 63 SE to supersamochód oferujący niesamowite osiągi w sportowym nadwoziu. Wykorzystuje hybrydowy napęd inspirowany Formułą 1, generując moc 843 KM i 900 Nm momentu obrotowego. Przyspieszenie do 100 km/h zajmuje zaledwie 2,9 s, a prędkość maksymalna to 316 km/h. Dodatkowo, sportowy układ wydechowy AMG Performance zapewnia rasowe brzmienie. Ten 5-drzwiowy supersamochód łączy osiągi z funkcjonalnością, oferując komfortową podróż dla czterech pasażerów.`,
+    technicalData: {
+      power: "843 KM",
+      torque: "900 Nm", // Dodano moment obrotowy na podstawie opisu
+      acceleration: "2,9 s",
+      gearbox: "Automatyczna",
+      drive: "4x4 4Matic",
+      engineType: "4.0L V8 BiTurbo Hybryda",
+      maxSpeed: "316 km/h",
+    },
+    equipment: [
+      "Android Auto",
+      "Apple CarPlay",
+      "Bezprzewodowe ładowanie telefonu (przód i tył)",
+      "Elektrycznie otwierana klapa bagażnika z dostępem bezdotykowym",
+      "Fotele elektrycznie sterowane z pamięcią ustawień",
+      "Fotele wentylowane",
+      "Fotele podgrzewane",
+      "Czujniki parkowania / kamera cofania 360 stopni z widokiem otoczenia",
+      "Komfortowe domykanie drzwi",
+      "Oświetlenie wnętrza Ambiente",
+      "Pakiet AMG Dynamic Plus",
+      "Skrętna tylna oś",
+      "System nagłośnieniowy Burmester Surround",
+      "Szyby przyciemniane",
+      "Wyświetlacz Head-Up",
+      "Zawieszenie AMG Ride Control",
+    ],
+    galleryImages: [
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-przod.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-sylwetka.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-bok.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-tyl.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-linia.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-wnetrze.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-deska-rozdzielcza.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-fotele.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-lampa.jpg",
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-felga.jpg",
+      // Możesz dodać więcej linków do zdjęć, jeśli posiadasz
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2800 },
+        { duration: "2-3 doby", price: 2500 },
+        { duration: "4-6 dób", price: 2350 },
+        { duration: "7-13 dób", price: 1950 },
+        { duration: "14-29 dób", price: 1400 },
+        { duration: "Miesiąc", price: 28000 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 6.50, // Cena brutto
+      relocationFees: {
+        upTo7Days: 500, // Cena netto
+        over7Days: 0,
+      },
+    },
+  },
 
   ];
   
