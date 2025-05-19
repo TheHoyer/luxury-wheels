@@ -303,6 +303,79 @@ const CARS_DATA = [
         ]
       }
     },
+  // --- 5. Mercedes-AMG G63 Black (Poprawione ścieżki zdjęć na polskie) ---
+  {
+    id: 5,
+    make: "Mercedes-AMG",
+    model: "G63 Black",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/MercedesG63Black/mercedes-amg-g63-black-bok.jpg", // Główne zdjęcie - widok z boku
+    logoUrl: "/images/MercedesG63Black/mercedes-amg.svg", // Logo marki w folderze modelu
+    specHighlights: {
+      power: "585 KM",
+      acceleration: "4,5 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "4.0L V8 Biturbo",
+      maxSpeed: "220 km/h",
+    },
+    description: `Historia Mercedesa klasy G sięga 1969 roku. Ideą powstania G klasy było połączenie terenowych zdolności z odpowiednim poziomem komfortu. Obecnie to SUV klasy wyższej, który stał się luksusowy, bardzo mocny i jedyny w swoim rodzaju. \n\nNasz egzemplarz Mercedesa to najmocniejsza wersja G63 z 4-litrowym silnikiem V8 Biturbo o mocy 585 KM i momencie obrotowym 850 Nm. Ten 2.6-tonowy kolos rozpędza się do 100 km/h w zaledwie 4.5 sekundy. Najnowsza generacja W483 wyróżnia się rewelacyjnymi osiągami, sportowym charakterem, poprawionym prowadzeniem oraz nowym poziomem luksusu i wykończenia wnętrza, szczególnie z “Pakietem wnętrza G manufaktur Plus” i “Pakietem Premium Plus”.\n\nNasz egzemplarz w czarnym lakierze z opcjonalnym pakietem night wygląda bardzo “bojowo”, podobnie jak jego osiągi. Przyśpieszenie jest uzależniające, a jazda nim to doświadczenie, którego ciężko porównać do jakiegokolwiek innego auta!`,
+    technicalData: {
+      power: "585 KM",
+      torque: "850 Nm",
+      acceleration: "4,5 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "4.0L V8 Biturbo",
+      maxSpeed: "220 km/h",
+    },
+    equipment: [
+      "Pakiet wnętrza G manufaktur Plus (m.in. ekskluzywna podsufitka designo, deska rozdzielcza obszyta skórą)",
+      "Pakiet Premium Plus",
+      "System nagłośnieniowy Burmester 3D",
+      "Elektrycznie sterowane okno dachowe",
+      "Kamera 360 stopni",
+      "Pakiet night",
+      "Adaptacyjny tempomat Distronic",
+      "Asystent martwego pola",
+      "Oświetlenie ambiente (64 kolory)",
+      "Jonizacja powietrza",
+      "Pakiet komfortowych siedzeń Plus",
+      "Powiększony zbiornik paliwa (100L)",
+    ],
+    galleryImages: [
+      "/images/MercedesG63Black/Mercedes-AMG-G63-przod.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-sylwetka.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-bok.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-tyl.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-linia.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-wnetrze.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-deska-rozdzielcza.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-widok-kierowcy.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-felga.jpg",
+      "/images/MercedesG63Black/Mercedes-AMG-G63-lampa-przod.jpg",
+    ],
+    pricing: {
+      deposit: 30000,
+      tiers: [
+        { duration: "1 doba", price: 3200 },
+        { duration: "2-3 doby", price: 2800 },
+        { duration: "4-6 dób", price: 2400 },
+        { duration: "7-13 dób", price: 1900 },
+        { duration: "14-29 dób", price: 1400 },
+        { duration: "Miesiąc", price: 29000 },
+      ],
+      mileage: [
+        { duration: "do 6 dni", limit: "150 km / doba" },
+        { duration: "od 7 do 13 dni", limit: "125 km / doba" },
+        { duration: "od 14 do 29 dni", limit: "100 km / doba" },
+        { duration: "od 30 dni", limit: "65 km / doba" },
+      ]
+    }
+  },
+// --- DODAJ KOLEJNE SAMOCHODY TUTAJ ---
+// --- DODAJ KOLEJNE SAMOCHODY TUTAJ ---
+
   
     // --- KONIEC DANYCH ---
   ];
