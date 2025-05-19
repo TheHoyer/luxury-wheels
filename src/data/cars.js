@@ -599,6 +599,226 @@ const CARS_DATA = [
     },
   },
 
+  {
+    id: 9, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    make: "Land Rover",
+    model: "Range Rover D300",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/LandRoverRangeRoverD300/Land-Rover-sylwetka-1.jpg", // Główne zdjęcie - może wymagać doprecyzowania
+    logoUrl: "/images/LandRoverRangeRoverD300/land-rover.svg", // Logo marki
+    specHighlights: {
+      power: "300 KM",
+      acceleration: "6,9 s",
+      gearbox: "Automatyczna",
+      drive: "AWD",
+      engineType: "3.0L",
+      maxSpeed: "218 km/h",
+    },
+    description: `Land Rover Range Rover to luksusowa alternatywa dla BMW X7, Mercedesa GLS, Bentleya Bentayga czy Porsche Cayenne. Wyróżnia się indywidualnym stylem, znakomitymi właściwościami terenowymi oraz naciskiem na komfort. Najnowsza generacja L460 to ponad 50 lat ewolucji. Oferuje zaawansowane technologie, elegancki design i luksusowe wnętrze z dużym ekranem Pivi Pro. Pneumatyczne zawieszenie i aktywne wyciszenie zapewniają komfort na długich trasach. Dzięki tylnej skrętnej osi, mimo swoich rozmiarów, dobrze radzi sobie w mieście. System Terrain Response 2 gwarantuje doskonałe właściwości terenowe. Bogate wyposażenie obejmuje m.in. panoramiczny dach, przyciemniane szyby, elektryczną klapę bagażnika, ambientowe oświetlenie i nagłośnienie Meridian.`,
+    technicalData: {
+      power: "300 KM",
+      acceleration: "6,9 s",
+      gearbox: "Automatyczna",
+      drive: "AWD",
+      engineType: "3.0 L",
+      maxSpeed: "218 km/h",
+    },
+    equipment: [
+      "Dach panoramiczny",
+      "Podgrzewana przednia szyba",
+      "Klimatyzacja automatyczna (trzystrefowa)",
+      "Przednie siedzenia elektrycznie regulowane w 24 kierunkach",
+      "Funkcja masażu przednich foteli",
+      "Podgrzewane i wentylowane fotele (przód i tył)",
+      "Wyświetlacz Head-Up",
+      "Podgrzewana kierownica",
+      "System domykania drzwi Soft Close",
+      "System nagłośnienia Meridian",
+      "Android Auto",
+      "Apple CarPlay",
+      "Lodówka w przedniej konsoli centralnej",
+    ],
+    galleryImages: [
+      "/images/LandRoverRangeRoverD300/Land-Rover-przod-1.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/LandRoverRangeRoverD300/Land-Rover-sylwetka-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-bok-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-tyl-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-linia-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-wnetrze-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-deska-rozdzielcza-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-zegary-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-felga-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-znaczek-1.jpg",
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 1900 },
+        { duration: "2-3 doby", price: 1700 },
+        { duration: "4-6 dób", price: 1500 },
+        { duration: "7-13 dób", price: 1300 },
+        { duration: "14-29 dób", price: 900 },
+        { duration: "Miesiąc", price: 24000 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 6.50, // Cena brutto
+      relocationFees: {
+        upTo7Days: 500, // Cena netto
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 10, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    make: "Audi",
+    model: "RS6 C8",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/AudiRS6C8/AUDI-RS6-sylwetka.jpg", // Główne zdjęcie - może wymagać doprecyzowania
+    logoUrl: "/images/AudiRS6C8/audi.svg", // Logo marki
+    specHighlights: {
+      power: "600 KM",
+      acceleration: "3,6 s",
+      gearbox: "Automatyczna",
+      drive: "4x4 quattro",
+      engineType: "4.0L TFSI",
+      maxSpeed: "250 km/h", // Ograniczona elektronicznie
+    },
+    description: `Audi RS6 C8 to unikatowe kombi o osiągach samochodu sportowego. Wyposażone w potężny silnik 4.0 V8 TFSI, znany z takich aut jak Lamborghini Urus czy Porsche Panamera. Oferuje szybkość, pojemność i komfort. Przyspiesza do 100 km/h w 3,6 s i może osiągnąć prędkość do 280 km/h (bez ograniczenia). Bogate wyposażenie obejmuje m.in. wentylowane fotele sportowe, reflektory HD Matrix LED z laserami i rozbudowane systemy parkowania. Napęd quattro zapewnia doskonałą trakcję, a sportowy układ wydechowy RS potęguje emocje z jazdy.`,
+    technicalData: {
+      power: "600 KM",
+      torque: "800 Nm", // Dodano moment obrotowy na podstawie opisu
+      acceleration: "3,6 s",
+      gearbox: "Automatyczna skrzynia tiptronic",
+      drive: "4x4 quattro",
+      engineType: "4.0L TFSI",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Kamera cofania 360 stopni",
+      "Klimatyzacja automatyczna (4-strefowa)",
+      "Podgrzewane fotele",
+      "Podgrzewana kierownica",
+      "Tempomat z regulacją prędkości i limiterem prędkości",
+      "Sportowy układ wydechowy RS",
+      "System rozpoznawania znaków drogowych",
+      "Zawieszenie pneumatyczne RS adaptive air suspension",
+      "Audi Virtual Cockpit",
+    ],
+    galleryImages: [
+      "/images/AudiRS6C8/AUDI-RS6-przod.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/AudiRS6C8/AUDI-RS6-sylwetka.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-bok.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-tyl.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-linia.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-wnetrze.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-deska-rozdzielcza.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-szyberdach.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-felga.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-znaczek.jpg",
+      // Możesz dodać więcej linków do zdjęć, jeśli posiadasz
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2100 },
+        { duration: "2-3 doby", price: 1850 },
+        { duration: "4-6 dób", price: 1700 },
+        { duration: "7-13 dób", price: 1400 },
+        { duration: "14-29 dób", price: 1000 },
+        { duration: "Miesiąc", price: 20500 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 5.00, // Cena brutto
+      relocationFees: {
+        upTo7Days: 500, // Cena netto
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 11, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    make: "Mercedes-Benz",
+    model: "GLS 450d 4Matic Obsidian",
+    // year: undefined, // Rok produkcji nie został podany
+    imageUrl: "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-sylwetka.jpg", // Główne zdjęcie - może wymagać doprecyzowania
+    logoUrl: "/images/MercedesGLS450d/mercedes-benz.svg", // Logo marki
+    specHighlights: {
+      power: "367 KM",
+      acceleration: "6,1 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.0 L",
+      maxSpeed: "250 km/h",
+    },
+    description: `Mercedes GLS 450d 4Matic to największy i najbardziej luksusowy SUV w gamie Mercedesa, stanowiący odpowiednik klasy S wśród SUV-ów. Oferuje komfort i przestronność dla siedmiu pasażerów. Napędzany jest mocnym 3.0-litrowym silnikiem wysokoprężnym o mocy 367 KM, współpracującym z napędem 4MATIC i automatyczną skrzynią 9G-TRONIC. Mimo swoich rozmiarów, charakteryzuje się stosunkowo niskim zużyciem paliwa dzięki wspomagającej jednostce elektrycznej. Wyjątkowy komfort zapewniają m.in. elektrycznie regulowane i wentylowane fotele, klimatyzacja THERMOTRONIC oraz laminowane szyby z izolacją termiczną i akustyczną. Bogate wyposażenie obejmuje również systemy asystujące kierowcy, szerokoekranowy kokpit MBUX i kamerę 360°.`,
+    technicalData: {
+      power: "367 KM",
+      torque: "brak danych", // Moment obrotowy nie został podany wprost
+      acceleration: "6,1 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.0 L",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Apple CarPlay",
+      "Android Auto",
+      "Asystent znaków drogowych",
+      "Dach panoramiczny",
+      "Klimatyzacja automatyczna (czterostrefowa)",
+      "Ładowanie indukcyjne telefonu",
+      "Hak holowniczy",
+      "Podgrzewane i wentylowane fotele (przedni rząd)",
+      "Podgrzewana kierownica",
+      "System nagłośnienia Burmester surround",
+      "Tempomat",
+    ],
+    galleryImages: [
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-przod.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-sylwetka.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-bok.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-tyl.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-wnetrze.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-widok-kierowcy.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-szyberdach.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-felga.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-lampa.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-wydech.jpg",
+      // Możesz dodać więcej linków do zdjęć, jeśli posiadasz
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2000 },
+        { duration: "2-3 doby", price: 1700 },
+        { duration: "4-6 dób", price: 1500 },
+        { duration: "7-13 dób", price: 1300 },
+        { duration: "14-29 dób", price: 1000 },
+        { duration: "Miesiąc", price: 19500 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 5.00, // Cena brutto
+      relocationFees: {
+        upTo7Days: 500, // Cena netto
+        over7Days: 0,
+      },
+    },
+  },
+
   ];
   
   // Eksportujemy tablicę, aby można ją było importować w innych komponentach
