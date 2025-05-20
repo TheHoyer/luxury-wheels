@@ -844,7 +844,7 @@ const CARS_DATA = [
     id: 13,
     make: "BMW",
     model: "X5 xDrive 40i",
-    imageUrl: "/images/BMWX5xDrive40i/BMW-X5-xDrive40i-sylwetka.jpg",
+    imageUrl: "/images/BMWX5xDrive40i/BMW-X5-sylwetka.jpg",
     logoUrl: "/images/BMWX5xDrive40i/bmw.svg",
     specHighlights: {
       power: "333 KM",
