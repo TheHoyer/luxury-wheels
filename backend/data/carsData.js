@@ -1,316 +1,271 @@
-// src/data/cars.js
-
-// =======================================================================
-//  Struktura Danych Samochodu
-// =======================================================================
-// id:                  Unikalny numer identyfikacyjny
-// make:                Marka (np. "Lamborghini")
-// model:               Model (np. "Huracán EVO")
-// year:                Rok produkcji (opcjonalnie, jeśli dostępny)
-// imageUrl:            Ścieżka do głównego zdjęcia (dla karty i strony szczegółów)
-// logoUrl:             Ścieżka do logo marki (SVG)
-// specHighlights:      Obiekt z kluczowymi specyfikacjami do szybkiego wyświetlenia
-//    power:            Moc (np. "640 KM")
-//    acceleration:     0-100 km/h (np. "2,9 s")
-//    gearbox:          Skrzynia biegów (np. "Automatyczna")
-//    drive:            Napęd (np. "4x4")
-//    engineType:       Typ silnika (np. "5.2L V10")
-//    maxSpeed:         Prędkość maksymalna (np. ">325 km/h")
-// description:         Główny opis marketingowy pojazdu
-// technicalData:       Obiekt z bardziej szczegółowymi danymi technicznymi
-//    (klucze jak w specHighlights lub inne dodatkowe)
-// equipment:           Tablica stringów z listą wyposażenia
-// galleryImages:       Tablica stringów ze ścieżkami do zdjęć do galerii/slidera
-// pricing:             Obiekt z informacjami o cenniku
-//    deposit:          Kaucja (liczba lub null/0 jeśli nie ma)
-//    tiers:            Tablica obiektów z progami cenowymi: { duration: "opis", price: liczba }
-//    mileage:          Tablica obiektów z limitami przebiegu: { duration: "opis", limit: "opis km" }
-//    hasMultipleOptions: (Opcjonalnie, true dla Porsche) Flaga wskazująca różne opcje cenowe
-//    options:          (Tylko dla Porsche) Obiekt z różnymi opcjami cenowymi
-// =======================================================================
-
 const CARS_DATA = [
-    // --- 1. Lamborghini Huracán EVO ---
-    {
-      id: 1,
-      make: "Lamborghini",
-      model: "Huracán EVO",
-      // year: 2021, // Brak w dostarczonych danych dla tego auta
-      imageUrl: "/images/Huracan_Evo/Lamborghini-Huracan-Evo-bok.jpg", // Główne zdjęcie
-      logoUrl: "/images/Huracan_Evo/lamborghini.svg",
-      specHighlights: {
-        power: "640 KM",
-        acceleration: "2,9 s",
-        gearbox: "Automatyczna",
-        drive: "4x4",
-        engineType: "5.2L V10",
-        maxSpeed: ">325 km/h",
-      },
-      description: `Lamborghini przy projektowaniu modelu Huracan Evo skupiło się na dopracowaniu istniejącej konstrukcji. Celem włoskiego producenta było poprawienie parametrów auta, z jednoczesnym uzyskaniem jeszcze większej ilości adrenaliny z jego prowadzenia. Charakterystyczny grill, ostry kształt reflektorów i aerodynamiczne akcenty podkreślają wyjątkowy charakter modelu.\n\nModel Huracan bazuje na wersji Performante, dzięki czemu m.in. uzyskuje dodatkowe 30KM i 40Nm względem „zwykłego” Huracana. To oczywiście nie wszystkie zmiany, jakie przeszedł ten pojazd. Dowiedz się co zyskujesz decydując się na wypożyczenie Lamborghini Huracan w tej wersji.`,
-      technicalData: {
-        power: "640 KM",
-        acceleration: "2,9 s",
-        gearbox: "Automatyczna",
-        drive: "4x4",
-        engineType: "5.2L V10",
-        maxSpeed: ">325 km/h",
-        // Można dodać więcej, jeśli znajdziesz
-      },
-      equipment: [
-        "Kamera cofania",
-        "System podnoszenia przodu",
-        "Podgrzewane fotele",
-        "Hamulce Karbonowo-ceramiczne",
-        "Fotele w pełni elektryczne",
-      ],
-      galleryImages: [
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-bok.jpg",
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-deska-rozdzielcza.jpg",
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-linia.jpg",
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-przod.jpg",
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-silnik-e1659606988238.jpg",
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-Sylwetka.jpg",
-        "/images/Huracan_Evo/Lamborghini-Huracan-Evo-tyl.jpg",
-      ],
-      pricing: {
-        deposit: 30000,
-        tiers: [
-          { duration: "1 doba", price: 5000 },
-          { duration: "2-3 doby", price: 4200 },
-          { duration: "4-6 dób", price: 3800 },
-          { duration: "7-13 dób", price: 3000 },
-          { duration: "14-29 dób", price: 2100 },
-          { duration: "Miesiąc", price: 45000 }, // Cena za miesiąc podana jako całość
-        ],
-        mileage: [
-          { duration: "do 6 dni", limit: "100 km / doba" },
-          { duration: "od 7 do 13 dni", limit: "85 km / doba" },
-          { duration: "od 14 do 29 dni", limit: "65 km / doba" },
-          { duration: "od 30 dni", limit: "50 km / doba" },
-        ]
-      }
+  {
+    id: 1,
+    make: "Lamborghini",
+    model: "Huracán EVO",
+    imageUrl: "/images/Huracan_Evo/Lamborghini-Huracan-Evo-bok.jpg",
+    logoUrl: "/images/Huracan_Evo/lamborghini.svg",
+    specHighlights: {
+      power: "640 KM",
+      acceleration: "2,9 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "5.2L V10",
+      maxSpeed: ">325 km/h",
     },
-  
-    // --- 2. Ferrari 812 Superfast ---
-    {
-      id: 2,
-      make: "Ferrari",
-      model: "812 Superfast",
-      // year: ???, // Brak w danych
-      imageUrl: "/images/Ferrari812/Ferrari-812-SUPERFAST-bok.jpg",
-      logoUrl: "/images/Ferrari812/ferrari.svg",
-      specHighlights: {
-        power: "800 KM",
-        acceleration: "2,9 s",
-        gearbox: "Automatyczna",
-        drive: "RWD", // Tylny napęd
-        engineType: "6.5L V12",
-        maxSpeed: "340 km/h",
-      },
-      description: `Ferrari 812 Superfast to następca słynnego modelu F12. Zawsze podczas premiery nowego, flagowego modelu włoskiej marki, oczekiwania fanów motoryzacji są olbrzymie. Czy producent z Maranello spełnił te oczekiwania? Zdecydowanie, 812 jest po prostu pod każdym względem jeszcze bardziej dopracowane – i co wyjątkowo ważne w dzisiejszych czasach, dostarcza jeszcze więcej adrenaliny z jazdy!`,
-      technicalData: {
-        power: "800 KM",
-        acceleration: "2.9 s",
-        gearbox: "Automatyczna",
-        drive: "RWD",
-        engineType: "6.5L V12",
-        maxSpeed: "340 km/h",
-      },
-      equipment: [
-        "Czarne końcówki wydechu",
-        "Fotele Elektryczne",
-        "Hamulce Karbonowo-Ceramiczne",
-        "Kamera Przód i tył",
-        "Kierownica Karbonowa",
-        "Klimatyzacja Dwustrefowa automatyczna",
-        "Nagłośnienie JBL",
-        "Symbol \"Prancing horse\" haftowany na zagłówkach",
-      ],
-      galleryImages: [
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-bok.jpg",
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-deska-rozdzielcza.jpg",
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-fotel.jpg",
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-przod.jpg",
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-sylwetka.jpg",
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-tyl.jpg",
-        "/images/Ferrari812/Ferrari-812-SUPERFAST-znaczek.jpg",
-      ],
-      pricing: {
-        deposit: 30000,
-        tiers: [
-          { duration: "1 doba", price: 5000 },
-          { duration: "2-3 doby", price: 4700 },
-          { duration: "4-6 dób", price: 4200 },
-          { duration: "7-13 dób", price: 3200 },
-          { duration: "14-29 dób", price: 2300 },
-          { duration: "Miesiąc", price: 45000 }, // Cena za miesiąc
-        ],
-        mileage: [
-          { duration: "do 6 dni", limit: "100 km / doba" },
-          { duration: "od 7 do 13 dni", limit: "85 km / doba" },
-          { duration: "od 14 do 29 dni", limit: "65 km / doba" },
-          { duration: "od 30 dni", limit: "50 km / doba" },
-        ]
-      }
+    description: `Lamborghini przy projektowaniu modelu Huracan Evo skupiło się na dopracowaniu istniejącej konstrukcji. Celem włoskiego producenta było poprawienie parametrów auta, z jednoczesnym uzyskaniem jeszcze większej ilości adrenaliny z jego prowadzenia. Charakterystyczny grill, ostry kształt reflektorów i aerodynamiczne akcenty podkreślają wyjątkowy charakter modelu.\n\nModel Huracan bazuje na wersji Performante, dzięki czemu m.in. uzyskuje dodatkowe 30KM i 40Nm względem „zwykłego” Huracana. To oczywiście nie wszystkie zmiany, jakie przeszedł ten pojazd. Dowiedz się co zyskujesz decydując się na wypożyczenie Lamborghini Huracan w tej wersji.`,
+    technicalData: {
+      power: "640 KM",
+      acceleration: "2,9 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "5.2L V10",
+      maxSpeed: ">325 km/h",
     },
-  
-    // --- 3. Porsche 911 Carrera 4 GTS Black ---
-    {
-      id: 3,
-      make: "Porsche",
-      model: "911 Carrera 4 GTS Black",
-      // year: ???, // Brak w danych
-      imageUrl: "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-bok.jpg",
-      logoUrl: "/images/Porsche911/porsche.svg",
-      specHighlights: {
-        power: "541 KM", // Uwaga: W specyfikacji jest 541KM, w danych tech 541KM. Trzymam się specyfikacji.
-        acceleration: "3,0 s", // Uwaga: W specyfikacji jest 3,0s, w danych tech 3,0s.
-        gearbox: "Automatyczna", // W danych tech jest "Automatyczna PDK"
-        drive: "4x4",
-        engineType: "3.6L", // W specyfikacji jest 3.6L, w danych tech 3.6L
-        maxSpeed: "312 km/h",
-      },
-      description: `Najnowsza generacja Porsche 911 Carrera 4 GTS to kolejna ewolucja kultowego modelu. Porsche nie zdecydowało się na ryzykowną rewolucję, postawiło na zachowanie klasycznych dla 911 elementów, ulepszając przy tym pod wieloma względami znaną nam konstrukcję.`,
-      technicalData: {
-        power: "541 KM",
-        acceleration: "3,0 s",
-        gearbox: "Automatyczna PDK",
-        drive: "4x4",
-        engineType: "3.6L", // Potwierdzenie
-        maxSpeed: "312 km/h",
-      },
-      equipment: [
-        "Apple Car Play",
-        "Elektrycznie uchylany szyberdach",
-        "Fotele Adaptacyjne sportowe Plus (18-kierunkowa regulacja, pamięć)",
-        "Nagłośnienie BOSE® Surround Sound System",
-        "Pakiet Aerodynamiczny (Aerokit)",
-        "Pakiet Sport Chrono",
-        "Podgrzewane fotele",
-        "Kierownica Sportowa GT (Race-Tex, podgrzewana, przełącznik trybów)",
-        "Przyciemniane szyby",
-        "Tempomat",
-        "Układ podnoszenia przedniej osi",
-        "Układ wydechowy Sportowy",
-        "Wspomaganie parkowania ParkAssist (przód i tył)",
-        "Wykończenie wnętrza Materiał Race-Tex",
-        "Zawieszenie Adaptacyjne PASM",
+    equipment: [
+      "Kamera cofania",
+      "System podnoszenia przodu",
+      "Podgrzewane fotele",
+      "Hamulce Karbonowo-ceramiczne",
+      "Fotele w pełni elektryczne",
+    ],
+    galleryImages: [
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-bok.jpg",
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-deska-rozdzielcza.jpg",
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-linia.jpg",
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-przod.jpg",
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-silnik-e1659606988238.jpg",
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-Sylwetka.jpg",
+      "/images/Huracan_Evo/Lamborghini-Huracan-Evo-tyl.jpg",
+    ],
+    pricing: {
+      deposit: 30000,
+      tiers: [
+        { duration: "1 doba", price: 5000 },
+        { duration: "2-3 doby", price: 4200 },
+        { duration: "4-6 dób", price: 3800 },
+        { duration: "7-13 dób", price: 3000 },
+        { duration: "14-29 dób", price: 2100 },
+        { duration: "Miesiąc", price: 45000 },
       ],
-      galleryImages: [
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-bok.jpg",
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-deska-rozdzielcza.jpg",
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-przod.jpg",
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-spoiler.jpg",
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-sylwetka.jpg",
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-tyl.jpg",
-        "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-wydech.jpg",
+      mileage: [
+        { duration: "do 6 dni", limit: "100 km / doba" },
+        { duration: "od 7 do 13 dni", limit: "85 km / doba" },
+        { duration: "od 14 do 29 dni", limit: "65 km / doba" },
+        { duration: "od 30 dni", limit: "50 km / doba" },
+      ]
+    }
+  },
+
+  {
+    id: 2,
+    make: "Ferrari",
+    model: "812 Superfast",
+    imageUrl: "/images/Ferrari812/Ferrari-812-SUPERFAST-bok.jpg",
+    logoUrl: "/images/Ferrari812/ferrari.svg",
+    specHighlights: {
+      power: "800 KM",
+      acceleration: "2,9 s",
+      gearbox: "Automatyczna",
+      drive: "RWD",
+      engineType: "6.5L V12",
+      maxSpeed: "340 km/h",
+    },
+    description: `Ferrari 812 Superfast to następca słynnego modelu F12. Zawsze podczas premiery nowego, flagowego modelu włoskiej marki, oczekiwania fanów motoryzacji są olbrzymie. Czy producent z Maranello spełnił te oczekiwania? Zdecydowanie, 812 jest po prostu pod każdym względem jeszcze bardziej dopracowane – i co wyjątkowo ważne w dzisiejszych czasach, dostarcza jeszcze więcej adrenaliny z jazdy!`,
+    technicalData: {
+      power: "800 KM",
+      acceleration: "2.9 s",
+      gearbox: "Automatyczna",
+      drive: "RWD",
+      engineType: "6.5L V12",
+      maxSpeed: "340 km/h",
+    },
+    equipment: [
+      "Czarne końcówki wydechu",
+      "Fotele Elektryczne",
+      "Hamulce Karbonowo-Ceramiczne",
+      "Kamera Przód i tył",
+      "Kierownica Karbonowa",
+      "Klimatyzacja Dwustrefowa automatyczna",
+      "Nagłośnienie JBL",
+      "Symbol \"Prancing horse\" haftowany na zagłówkach",
+    ],
+    galleryImages: [
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-bok.jpg",
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-deska-rozdzielcza.jpg",
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-fotel.jpg",
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-przod.jpg",
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-sylwetka.jpg",
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-tyl.jpg",
+      "/images/Ferrari812/Ferrari-812-SUPERFAST-znaczek.jpg",
+    ],
+    pricing: {
+      deposit: 30000,
+      tiers: [
+        { duration: "1 doba", price: 5000 },
+        { duration: "2-3 doby", price: 4700 },
+        { duration: "4-6 dób", price: 4200 },
+        { duration: "7-13 dób", price: 3200 },
+        { duration: "14-29 dób", price: 2300 },
+        { duration: "Miesiąc", price: 45000 },
       ],
-      // Specjalna struktura dla Porsche z dwoma opcjami cenowymi
-      pricing: {
-        hasMultipleOptions: true, // Flaga wskazująca na opcje
-        options: {
-          withDeposit: {
-            optionLabel: "Wynajem z kaucją (20 000 zł)",
-            deposit: 20000,
-            tiers: [
-              { duration: "1 doba", price: 2400 },
-              { duration: "2-3 doby", price: 2150 },
-              { duration: "4-6 dób", price: 2000 },
-              { duration: "7-13 dób", price: 1650 },
-              { duration: "14-29 dób", price: 1200 },
-              // Miesiąc dla opcji z kaucją nie podany (?) - użyję wspólnej wartości jeśli to ok
-            ],
-          },
-          withoutDeposit: {
-            optionLabel: "Wynajem bez kaucji",
-            deposit: 0,
-            tiers: [
-              { duration: "1 doba", price: 2800 },
-              { duration: "2-3 doby", price: 2500 },
-              { duration: "4-6 dób", price: 2350 },
-              { duration: "7-13 dób", price: 1950 },
-              { duration: "14-29 dób", price: 1400 },
-            ]
-          },
-          // Wspólne elementy można umieścić poza options, jeśli są takie same
-          monthlyPrice: 34000, // Wspólna cena za miesiąc (?)
+      mileage: [
+        { duration: "do 6 dni", limit: "100 km / doba" },
+        { duration: "od 7 do 13 dni", limit: "85 km / doba" },
+        { duration: "od 14 do 29 dni", limit: "65 km / doba" },
+        { duration: "od 30 dni", limit: "50 km / doba" },
+      ]
+    }
+  },
+
+  {
+    id: 3,
+    make: "Porsche",
+    model: "911 Carrera 4 GTS Black",
+    imageUrl: "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-bok.jpg",
+    logoUrl: "/images/Porsche911/porsche.svg",
+    specHighlights: {
+      power: "541 KM",
+      acceleration: "3,0 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.6L",
+      maxSpeed: "312 km/h",
+    },
+    description: `Najnowsza generacja Porsche 911 Carrera 4 GTS to kolejna ewolucja kultowego modelu. Porsche nie zdecydowało się na ryzykowną rewolucję, postawiło na zachowanie klasycznych dla 911 elementów, ulepszając przy tym pod wieloma względami znaną nam konstrukcję.`,
+    technicalData: {
+      power: "541 KM",
+      acceleration: "3,0 s",
+      gearbox: "Automatyczna PDK",
+      drive: "4x4",
+      engineType: "3.6L",
+      maxSpeed: "312 km/h",
+    },
+    equipment: [
+      "Apple Car Play",
+      "Elektrycznie uchylany szyberdach",
+      "Fotele Adaptacyjne sportowe Plus (18-kierunkowa regulacja, pamięć)",
+      "Nagłośnienie BOSE® Surround Sound System",
+      "Pakiet Aerodynamiczny (Aerokit)",
+      "Pakiet Sport Chrono",
+      "Podgrzewane fotele",
+      "Kierownica Sportowa GT (Race-Tex, podgrzewana, przełącznik trybów)",
+      "Przyciemniane szyby",
+      "Tempomat",
+      "Układ podnoszenia przedniej osi",
+      "Układ wydechowy Sportowy",
+      "Wspomaganie parkowania ParkAssist (przód i tył)",
+      "Wykończenie wnętrza Materiał Race-Tex",
+      "Zawieszenie Adaptacyjne PASM",
+    ],
+    galleryImages: [
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-bok.jpg",
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-deska-rozdzielcza.jpg",
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-przod.jpg",
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-spoiler.jpg",
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-sylwetka.jpg",
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-tyl.jpg",
+      "/images/Porsche911/Porsche-911-Carrera-4-GTS-Black-wydech.jpg",
+    ],
+    pricing: {
+      hasMultipleOptions: true,
+      options: {
+        withDeposit: {
+          optionLabel: "Wynajem z kaucją (20 000 zł)",
+          deposit: 20000,
+          tiers: [
+            { duration: "1 doba", price: 2400 },
+            { duration: "2-3 doby", price: 2150 },
+            { duration: "4-6 dób", price: 2000 },
+            { duration: "7-13 dób", price: 1650 },
+            { duration: "14-29 dób", price: 1200 },
+          ],
         },
-        mileage: [ // Limity przebiegu dla Porsche
-          { duration: "do 14 dni", limit: "150 km / doba" },
-          { duration: "od 14 do 29 dni", limit: "100 km / doba" },
-          { duration: "od 30 dni", limit: "65 km / doba" },
-        ]
-      }
-    },
-  
-    // --- 4. BMW XM ---
-    {
-      id: 4,
-      make: "BMW",
-      model: "XM",
-      // year: ???, // Brak w danych
-      imageUrl: "/images/BmwXM/XM-5-sylwetka.jpg", // Wybrałem sylwetkę jako główne
-      logoUrl: "/images/BmwXM/bmw.svg",
-      specHighlights: {
-        power: "653 KM",
-        acceleration: "4,3 s",
-        gearbox: "Automatyczna",
-        drive: "4x4",
-        engineType: "4.4 L", // Zakładam, że V8, ale dane tego nie mówią
-        maxSpeed: "250 km/h", // Ograniczona elektronicznie?
+        withoutDeposit: {
+          optionLabel: "Wynajem bez kaucji",
+          deposit: 0,
+          tiers: [
+            { duration: "1 doba", price: 2800 },
+            { duration: "2-3 doby", price: 2500 },
+            { duration: "4-6 dób", price: 2350 },
+            { duration: "7-13 dób", price: 1950 },
+            { duration: "14-29 dób", price: 1400 },
+          ]
+        },
+        monthlyPrice: 34000,
       },
-      description: `BMW XM to bez dwóch zdań propozycja kontrowersyjna, ale nie można odmówić temu autu, że robi wrażenie – pod różnymi względami! Moc – 653 KM, wartość – siedmiocyfrowa (ponad milion złotych), przyspieszenie – ok. 4s, silnik – jedyny właściwy, czyli 4.4L turbodoładowane V8! Wszystko to w połączeniu z bardzo nowoczesnym designem i faktem, że jest to dopiero drugi model M niemający swojego odpowiednika w „bazowej” gamie BMW. To sprawia, że XM jest wyjątkowy i nieporównywalny.`,
-      technicalData: {
-        power: "653 KM",
-        acceleration: "4,3 s",
-        gearbox: "Automatyczna",
-        drive: "4x4",
-        engineType: "4.4 L V8 Twin-Turbo", // Dodałem V8 na podstawie opisu
-        maxSpeed: "250 km/h",
-      },
-      equipment: [
-        "Ambientowe Podświetlenie",
-        "Kamera cofania", // Jest w specyfikacji, ale nie w sekcji wyposażenia - dodałem
-        "Fotele wentylowane/podgrzewane",
-        "Funkcja masażu w fotelu kierowcy i pasażera",
-        "Klimatyzacja dwustrefowa",
-        "Nagłośnienie Bowers & Wilkins High End Sound System",
-        "System wspomagania parkowania Plus",
-      ],
-      galleryImages: [
-        "/images/BmwXM/XM-1-tyl.jpg",
-        "/images/BmwXM/XM-10-deska-rozdzielcza.jpg",
-        "/images/BmwXM/XM-36-lampa-przod.jpg",
-        "/images/BmwXM/XM-39-uklad-wydechowy.jpg",
-        "/images/BmwXM/XM-4-przod.jpg",
-        "/images/BmwXM/XM-5-sylwetka.jpg",
-        "/images/BmwXM/XM-7-bok.jpg",
-      ],
-      pricing: {
-        deposit: 10000,
-        tiers: [
-          { duration: "1 doba", price: 2800 },
-          { duration: "2-3 doby", price: 2500 },
-          { duration: "4-6 dób", price: 2350 },
-          { duration: "7-13 dób", price: 1950 },
-          { duration: "14-29 dób", price: 1400 },
-          { duration: "Miesiąc", price: 28000 }, // Cena za miesiąc
-        ],
-        mileage: [
-          { duration: "do 7 dni", limit: "250 km / doba" },
-          { duration: "od 7 dni do 30 dni", limit: "150 km / doba" }, // Poprawiono opis zakresu
-          { duration: "od 30 dni", limit: "100 km / doba" },
-        ]
-      }
+      mileage: [
+        { duration: "do 14 dni", limit: "150 km / doba" },
+        { duration: "od 14 do 29 dni", limit: "100 km / doba" },
+        { duration: "od 30 dni", limit: "65 km / doba" },
+      ]
+    }
+  },
+
+  {
+    id: 4,
+    make: "BMW",
+    model: "XM",
+    imageUrl: "/images/BmwXM/XM-5-sylwetka.jpg",
+    logoUrl: "/images/BmwXM/bmw.svg",
+    specHighlights: {
+      power: "653 KM",
+      acceleration: "4,3 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "4.4 L",
+      maxSpeed: "250 km/h",
     },
-  // --- 5. Mercedes-AMG G63 Black (Poprawione ścieżki zdjęć na polskie) ---
+    description: `BMW XM to bez dwóch zdań propozycja kontrowersyjna, ale nie można odmówić temu autu, że robi wrażenie – pod różnymi względami! Moc – 653 KM, wartość – siedmiocyfrowa (ponad milion złotych), przyspieszenie – ok. 4s, silnik – jedyny właściwy, czyli 4.4L turbodoładowane V8! Wszystko to w połączeniu z bardzo nowoczesnym designem i faktem, że jest to dopiero drugi model M niemający swojego odpowiednika w „bazowej” gamie BMW. To sprawia, że XM jest wyjątkowy i nieporównywalny.`,
+    technicalData: {
+      power: "653 KM",
+      acceleration: "4,3 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "4.4 L V8 Twin-Turbo",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Ambientowe Podświetlenie",
+      "Kamera cofania",
+      "Fotele wentylowane/podgrzewane",
+      "Funkcja masażu w fotelu kierowcy i pasażera",
+      "Klimatyzacja dwustrefowa",
+      "Nagłośnienie Bowers & Wilkins High End Sound System",
+      "System wspomagania parkowania Plus",
+    ],
+    galleryImages: [
+      "/images/BmwXM/XM-1-tyl.jpg",
+      "/images/BmwXM/XM-10-deska-rozdzielcza.jpg",
+      "/images/BmwXM/XM-36-lampa-przod.jpg",
+      "/images/BmwXM/XM-39-uklad-wydechowy.jpg",
+      "/images/BmwXM/XM-4-przod.jpg",
+      "/images/BmwXM/XM-5-sylwetka.jpg",
+      "/images/BmwXM/XM-7-bok.jpg",
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2800 },
+        { duration: "2-3 doby", price: 2500 },
+        { duration: "4-6 dób", price: 2350 },
+        { duration: "7-13 dób", price: 1950 },
+        { duration: "14-29 dób", price: 1400 },
+        { duration: "Miesiąc", price: 28000 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ]
+    }
+  },
   {
     id: 5,
     make: "Mercedes-AMG",
     model: "G63 Black",
-    // year: undefined, // Rok produkcji nie został podany
-    imageUrl: "/images/MercedesG63Black/Mercedes-AMG-G63-sylwetka.jpg", // Główne zdjęcie - widok z boku
-    logoUrl: "/images/MercedesG63Black/mercedes-amg.svg", // Logo marki w folderze modelu
+    imageUrl: "/images/MercedesG63Black/Mercedes-AMG-G63-sylwetka.jpg",
+    logoUrl: "/images/MercedesG63Black/mercedes-amg.svg",
     specHighlights: {
       power: "585 KM",
       acceleration: "4,5 s",
@@ -375,12 +330,11 @@ const CARS_DATA = [
   },
 
   {
-    id: 6, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    id: 6,
     make: "Mercedes-AMG",
     model: "G63 Brown",
-    // year: undefined, // Rok produkcji nie został podany
-    imageUrl: "/images/MercedesG63Brown/Mercedes-G63-Brown-sylwetka.jpg", // Główne zdjęcie - widok z boku (może wymagać zmiany)
-    logoUrl: "/images/MercedesG63Brown/mercedes-amg.svg", // Logo marki
+    imageUrl: "/images/MercedesG63Brown/Mercedes-G63-Brown-sylwetka.jpg",
+    logoUrl: "/images/MercedesG63Brown/mercedes-amg.svg",
     specHighlights: {
       power: "585 KM",
       acceleration: "4,5 s",
@@ -392,7 +346,7 @@ const CARS_DATA = [
     description: `Historia Mercedesa klasy G sięga 1969 roku. Ideą powstania G klasy było połączenie terenowych zdolności z odpowiednim poziomem komfortu. Obecnie to SUV klasy wyższej, który stał się luksusowy, bardzo mocny i jedyny w swoim rodzaju. \n\nNasz egzemplarz to najmocniejsza wersja G63 z 4-litrowym silnikiem V8 Biturbo o mocy 585 KM. Ten 2.6-tonowy kolos rozpędza się do 100 km/h w zaledwie 4.5 sekundy. Najnowsza generacja W483 wyróżnia się rewelacyjnymi osiągami i poprawionym prowadzeniem oraz nowym poziomem luksusu i wykończenia wnętrza, szczególnie z “Pakietem wnętrza G manufaktur Plus” i “Pakietem Premium Plus”.\n\nNasz egzemplarz w brązowym lakierze z pewnością przyciąga uwagę. Jazda nim to wyjątkowe doświadczenie, które ciężko porównać do jakiegokolwiek innego auta!`,
     technicalData: {
       power: "585 KM",
-      torque: "brak danych", // Moment obrotowy nie został podany wprost w nowym opisie
+      torque: "brak danych",
       acceleration: "4,5 s",
       gearbox: "Automatyczna AMG SPEEDSHIFT TCT 9G",
       drive: "4x4",
@@ -412,7 +366,7 @@ const CARS_DATA = [
       "Oświetlenie ambiente (64 kolory)",
     ],
     galleryImages: [
-      "/images/MercedesG63Brown/Mercedes-G63-Brown-przod.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/MercedesG63Brown/Mercedes-G63-Brown-przod.jpg",
       "/images/MercedesG63Brown/Mercedes-G63-Brown-sylwetka.jpg",
       "/images/MercedesG63Brown/Mercedes-G63-Brown-bok.jpg",
       "/images/MercedesG63Brown/Mercedes-G63-Brown-tyl.jpg",
@@ -422,7 +376,6 @@ const CARS_DATA = [
       "/images/MercedesG63Brown/Mercedes-G63-Brown-felga.jpg",
       "/images/MercedesG63Brown/Mercedes-G63-Brown-lampa-przod.jpg",
       "/images/MercedesG63Brown/Mercedes-G63-Brown-znaczek-1.jpg",
-      // Możesz dodać więcej linków do zdjęć, jeśli posiadasz
     ],
     pricing: {
       deposit: 30000,
@@ -440,20 +393,19 @@ const CARS_DATA = [
         { duration: "od 14 do 29 dni", limit: "100 km / doba" },
         { duration: "od 30 dni", limit: "65 km / doba" },
       ],
-      additionalMileageCost: 9, // Cena brutto
+      additionalMileageCost: 9,
       relocationFees: {
-        upTo7Days: 500, // Cena netto
+        upTo7Days: 500,
         over7Days: 0,
       },
     },
   },
   {
-    id: 7, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    id: 7,
     make: "Mercedes-AMG",
     model: "G63 Bordowy",
-    // year: undefined, // Rok produkcji nie został podany
-    imageUrl: "/images/MercedesG63Red/Mercedes-G63-Red-sylwetka.jpg", // Główne zdjęcie - widok z boku (może wymagać zmiany na bordowy)
-    logoUrl: "/images/MercedesG63Red/mercedes-amg.svg", // Logo marki
+    imageUrl: "/images/MercedesG63Red/Mercedes-G63-Red-sylwetka.jpg",
+    logoUrl: "/images/MercedesG63Red/mercedes-amg.svg",
     specHighlights: {
       power: "585 KM",
       acceleration: "4,5 s",
@@ -465,7 +417,7 @@ const CARS_DATA = [
     description: `Historia Mercedesa klasy G sięga 1969 roku. Ideą powstania G klasy było połączenie terenowych zdolności z odpowiednim poziomem komfortu. Obecnie to SUV klasy wyższej, który stał się luksusowy, bardzo mocny i jedyny w swoim rodzaju. \n\nNasz egzemplarz to najmocniejsza wersja G63 z 4-litrowym silnikiem V8 Biturbo o mocy 585 KM. Ten 2.6-tonowy kolos rozpędza się do 100 km/h w zaledwie 4.5 sekundy. Najnowsza generacja W483 wyróżnia się rewelacyjnymi osiągami i poprawionym prowadzeniem oraz nowym poziomem luksusu i wykończenia wnętrza, szczególnie z “Pakietem wnętrza G manufaktur Plus” i “Pakietem Premium Plus”.\n\nNasz egzemplarz w bordowym lakierze z pewnością przyciąga uwagę. Jazda nim to wyjątkowe doświadczenie, które ciężko porównać do jakiegokolwiek innego auta!`,
     technicalData: {
       power: "585 KM",
-      torque: "brak danych", // Moment obrotowy nie został podany wprost w nowym opisie
+      torque: "brak danych",
       acceleration: "4,5 s",
       gearbox: "Automatyczna AMG SPEEDSHIFT TCT 9G",
       drive: "4x4",
@@ -512,21 +464,20 @@ const CARS_DATA = [
         { duration: "od 14 do 29 dni", limit: "100 km / doba" },
         { duration: "od 30 dni", limit: "65 km / doba" },
       ],
-      additionalMileageCost: 9, // Cena brutto
+      additionalMileageCost: 9,
       relocationFees: {
-        upTo7Days: 500, // Cena netto
+        upTo7Days: 500,
         over7Days: 0,
       },
     },
   },
 
   {
-    id: 8, // Zakładam, że to kolejny samochód, więc ID powinno być unikalne
+    id: 8,
     make: "Mercedes-AMG",
     model: "GT 63 SE",
-    // year: undefined, // Rok produkcji nie został podany
-    imageUrl: "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-sylwetka.jpg", // Główne zdjęcie - może wymagać doprecyzowania
-    logoUrl: "/images/MercedesAMG_GT63SE/mercedes-amg.svg", // Logo marki
+    imageUrl: "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-sylwetka.jpg",
+    logoUrl: "/images/MercedesAMG_GT63SE/mercedes-amg.svg",
     specHighlights: {
       power: "843 KM",
       acceleration: "2,9 s",
@@ -538,7 +489,7 @@ const CARS_DATA = [
     description: `Mercedes-AMG GT to perła w koronie samochodów AMG. Model GT 63 SE to supersamochód oferujący niesamowite osiągi w sportowym nadwoziu. Wykorzystuje hybrydowy napęd inspirowany Formułą 1, generując moc 843 KM i 900 Nm momentu obrotowego. Przyspieszenie do 100 km/h zajmuje zaledwie 2,9 s, a prędkość maksymalna to 316 km/h. Dodatkowo, sportowy układ wydechowy AMG Performance zapewnia rasowe brzmienie. Ten 5-drzwiowy supersamochód łączy osiągi z funkcjonalnością, oferując komfortową podróż dla czterech pasażerów.`,
     technicalData: {
       power: "843 KM",
-      torque: "900 Nm", // Dodano moment obrotowy na podstawie opisu
+      torque: "900 Nm",
       acceleration: "2,9 s",
       gearbox: "Automatyczna",
       drive: "4x4 4Matic",
@@ -564,7 +515,7 @@ const CARS_DATA = [
       "Zawieszenie AMG Ride Control",
     ],
     galleryImages: [
-      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-przod.jpg", // Przykładowe zdjęcia - nazwy folderów i plików mogą wymagać korekty
+      "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-przod.jpg",
       "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-sylwetka.jpg",
       "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-bok.jpg",
       "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-tyl.jpg",
@@ -574,7 +525,6 @@ const CARS_DATA = [
       "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-fotele.jpg",
       "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-lampa.jpg",
       "/images/MercedesAMG_GT63SE/Mercedes-AMG-GT-63-SE-felga.jpg",
-      // Możesz dodać więcej linków do zdjęć, jeśli posiadasz
     ],
     pricing: {
       deposit: 10000,
@@ -591,15 +541,380 @@ const CARS_DATA = [
         { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
         { duration: "od 30 dni", limit: "100 km / doba" },
       ],
-      additionalMileageCost: 6.50, // Cena brutto
+      additionalMileageCost: 6.50,
       relocationFees: {
-        upTo7Days: 500, // Cena netto
+        upTo7Days: 500,
         over7Days: 0,
       },
     },
   },
 
-  ];
-  
-  // Eksportujemy tablicę, aby można ją było importować w innych komponentach
+  {
+    id: 9,
+    make: "Land Rover",
+    model: "Range Rover D300",
+    imageUrl: "/images/LandRoverRangeRoverD300/Land-Rover-sylwetka-1.jpg",
+    logoUrl: "/images/LandRoverRangeRoverD300/land-rover.svg",
+    specHighlights: {
+      power: "300 KM",
+      acceleration: "6,9 s",
+      gearbox: "Automatyczna",
+      drive: "AWD",
+      engineType: "3.0L",
+      maxSpeed: "218 km/h",
+    },
+    description: `Land Rover Range Rover to luksusowa alternatywa dla BMW X7, Mercedesa GLS, Bentleya Bentayga czy Porsche Cayenne. Wyróżnia się indywidualnym stylem, znakomitymi właściwościami terenowymi oraz naciskiem na komfort. Najnowsza generacja L460 to ponad 50 lat ewolucji. Oferuje zaawansowane technologie, elegancki design i luksusowe wnętrze z dużym ekranem Pivi Pro. Pneumatyczne zawieszenie i aktywne wyciszenie zapewniają komfort na długich trasach. Dzięki tylnej skrętnej osi, mimo swoich rozmiarów, dobrze radzi sobie w mieście. System Terrain Response 2 gwarantuje doskonałe właściwości terenowe. Bogate wyposażenie obejmuje m.in. panoramiczny dach, przyciemniane szyby, elektryczną klapę bagażnika, ambientowe oświetlenie i nagłośnienie Meridian.`,
+    technicalData: {
+      power: "300 KM",
+      acceleration: "6,9 s",
+      gearbox: "Automatyczna",
+      drive: "AWD",
+      engineType: "3.0 L",
+      maxSpeed: "218 km/h",
+    },
+    equipment: [
+      "Dach panoramiczny",
+      "Podgrzewana przednia szyba",
+      "Klimatyzacja automatyczna (trzystrefowa)",
+      "Przednie siedzenia elektrycznie regulowane w 24 kierunkach",
+      "Funkcja masażu przednich foteli",
+      "Podgrzewane i wentylowane fotele (przód i tył)",
+      "Wyświetlacz Head-Up",
+      "Podgrzewana kierownica",
+      "System domykania drzwi Soft Close",
+      "System nagłośnienia Meridian",
+      "Android Auto",
+      "Apple CarPlay",
+      "Lodówka w przedniej konsoli centralnej",
+    ],
+    galleryImages: [
+      "/images/LandRoverRangeRoverD300/Land-Rover-przod-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-sylwetka-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-bok-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-tyl-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-linia-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-wnetrze-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-deska-rozdzielcza-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-zegary-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-felga-1.jpg",
+      "/images/LandRoverRangeRoverD300/Land-Rover-znaczek-1.jpg",
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 1900 },
+        { duration: "2-3 doby", price: 1700 },
+        { duration: "4-6 dób", price: 1500 },
+        { duration: "7-13 dób", price: 1300 },
+        { duration: "14-29 dób", price: 900 },
+        { duration: "Miesiąc", price: 24000 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 6.50,
+      relocationFees: {
+        upTo7Days: 500,
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 10,
+    make: "Audi",
+    model: "RS6 C8",
+    imageUrl: "/images/AudiRS6C8/AUDI-RS6-sylwetka.jpg",
+    logoUrl: "/images/AudiRS6C8/audi.svg",
+    specHighlights: {
+      power: "600 KM",
+      acceleration: "3,6 s",
+      gearbox: "Automatyczna",
+      drive: "4x4 quattro",
+      engineType: "4.0L TFSI",
+      maxSpeed: "250 km/h",
+    },
+    description: `Audi RS6 C8 to unikatowe kombi o osiągach samochodu sportowego. Wyposażone w potężny silnik 4.0 V8 TFSI, znany z takich aut jak Lamborghini Urus czy Porsche Panamera. Oferuje szybkość, pojemność i komfort. Przyspiesza do 100 km/h w 3,6 s i może osiągnąć prędkość do 280 km/h (bez ograniczenia). Bogate wyposażenie obejmuje m.in. wentylowane fotele sportowe, reflektory HD Matrix LED z laserami i rozbudowane systemy parkowania. Napęd quattro zapewnia doskonałą trakcję, a sportowy układ wydechowy RS potęguje emocje z jazdy.`,
+    technicalData: {
+      power: "600 KM",
+      torque: "800 Nm",
+      acceleration: "3,6 s",
+      gearbox: "Automatyczna skrzynia tiptronic",
+      drive: "4x4 quattro",
+      engineType: "4.0L TFSI",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Kamera cofania 360 stopni",
+      "Klimatyzacja automatyczna (4-strefowa)",
+      "Podgrzewane fotele",
+      "Podgrzewana kierownica",
+      "Tempomat z regulacją prędkości i limiterem prędkości",
+      "Sportowy układ wydechowy RS",
+      "System rozpoznawania znaków drogowych",
+      "Zawieszenie pneumatyczne RS adaptive air suspension",
+      "Audi Virtual Cockpit",
+    ],
+    galleryImages: [
+      "/images/AudiRS6C8/AUDI-RS6-przod.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-sylwetka.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-bok.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-tyl.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-linia.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-wnetrze.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-deska-rozdzielcza.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-szyberdach.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-felga.jpg",
+      "/images/AudiRS6C8/AUDI-RS6-znaczek.jpg",
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2100 },
+        { duration: "2-3 doby", price: 1850 },
+        { duration: "4-6 dób", price: 1700 },
+        { duration: "7-13 dób", price: 1400 },
+        { duration: "14-29 dób", price: 1000 },
+        { duration: "Miesiąc", price: 20500 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 5.00,
+      relocationFees: {
+        upTo7Days: 500,
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 11,
+    make: "Mercedes-Benz",
+    model: "GLS 450d 4Matic Obsidian",
+    imageUrl: "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-sylwetka.jpg",
+    logoUrl: "/images/MercedesGLS450d/mercedes-benz.svg",
+    specHighlights: {
+      power: "367 KM",
+      acceleration: "6,1 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.0 L",
+      maxSpeed: "250 km/h",
+    },
+    description: `Mercedes GLS 450d 4Matic to największy i najbardziej luksusowy SUV w gamie Mercedesa, stanowiący odpowiednik klasy S wśród SUV-ów. Oferuje komfort i przestronność dla siedmiu pasażerów. Napędzany jest mocnym 3.0-litrowym silnikiem wysokoprężnym o mocy 367 KM, współpracującym z napędem 4MATIC i automatyczną skrzynią 9G-TRONIC. Mimo swoich rozmiarów, charakteryzuje się stosunkowo niskim zużyciem paliwa dzięki wspomagającej jednostce elektrycznej. Wyjątkowy komfort zapewniają m.in. elektrycznie regulowane i wentylowane fotele, klimatyzacja THERMOTRONIC oraz laminowane szyby z izolacją termiczną i akustyczną. Bogate wyposażenie obejmuje również systemy asystujące kierowcy, szerokoekranowy kokpit MBUX i kamerę 360°.`,
+    technicalData: {
+      power: "367 KM",
+      torque: "brak danych",
+      acceleration: "6,1 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.0 L",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Apple CarPlay",
+      "Android Auto",
+      "Asystent znaków drogowych",
+      "Dach panoramiczny",
+      "Klimatyzacja automatyczna (czterostrefowa)",
+      "Ładowanie indukcyjne telefonu",
+      "Hak holowniczy",
+      "Podgrzewane i wentylowane fotele (przedni rząd)",
+      "Podgrzewana kierownica",
+      "System nagłośnienia Burmester surround",
+      "Tempomat",
+    ],
+    galleryImages: [
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-przod.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-sylwetka.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-bok.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-tyl.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-wnetrze.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-widok-kierowcy.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-szyberdach.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-felga.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-lampa.jpg",
+      "/images/MercedesGLS450d/Mercedes-GLS-450d-4Matic-Obsidian-wydech.jpg",
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2000 },
+        { duration: "2-3 doby", price: 1700 },
+        { duration: "4-6 dób", price: 1500 },
+        { duration: "7-13 dób", price: 1300 },
+        { duration: "14-29 dób", price: 1000 },
+        { duration: "Miesiąc", price: 19500 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 5.00,
+      relocationFees: {
+        upTo7Days: 500,
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 12,
+    make: "Mercedes-Benz",
+    model: "S400d 4Matic Long",
+    imageUrl: "/images/MercedesS400dLong/S-Klasa-5-sylwetka.jpg",
+    logoUrl: "/images/MercedesS400dLong/mercedes-benz.svg",
+    specHighlights: {
+      power: "330 KM",
+      acceleration: "5,4 s",
+      gearbox: "Automatyczna",
+      drive: "4x4 4Matic",
+      engineType: "3.0L",
+      maxSpeed: "250 km/h",
+    },
+    description: `Mercedes Klasy S, a w szczególności model S400d 4Matic Long, to symbol luksusu, komfortu i technologicznej doskonałości w segmencie limuzyn. Idealnie sprawdza się na długich trasach, oferując maksymalny komfort dzięki zawieszeniu doskonale tłumiącemu nierówności. System czterech kół skrętnych sprawia, że auto jest zaskakująco zwrotne nawet w warunkach miejskich. Wartość opcji dodatkowych w tym egzemplarzu jest imponująca, w tym 21-calowe czarne felgi AMG, zewnętrzny i wewnętrzny pakiet AMG oraz rozbudowany pakiet wyposażenia Premium Plus. Ten ostatni zawiera m.in. układ kamer 360 stopni, zaawansowane systemy bezpieczeństwa oraz pakiet Energizing, który dba o samopoczucie kierowcy i pasażerów poprzez odpowiednią konfigurację masażu foteli, oświetlenia ambient, klimatyzacji i nagłośnienia Burmester 3D surround. Komfort pasażerów tylnego rzędu podnosi pakiet „Rear” z oddzielnym panelem sterowania, wentylacją i funkcją masażu foteli. Dla kierowcy dostępne są adaptacyjny tempomat, wyświetlacz head-up z rozszerzoną rzeczywistością i reflektory Digital Light.`,
+    technicalData: {
+      power: "330 KM",
+      torque: "brak danych",
+      acceleration: "5,4 s",
+      gearbox: "Automatyczna",
+      drive: "4x4 4Matic",
+      engineType: "3.0L",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Klimatyzacja automatyczna (czterostrefowa)",
+      "Pakiet „chauffeur” (elektrycznie regulowany fotel kierowcy z pamięcią, czytnik linii papilarnych, komfortowe zagłówki, automatycznie przyciemniające się lusterka)",
+      "Pakiet Premium Plus (układ kamer 360 stopni, zaawansowane systemy bezpieczeństwa, mnogość systemów wspomagających parkowanie)",
+      "Pakiet Energizing (podgrzewana kierownica, podgrzewane podłokietniki przód/tył, klimatyzowane fotele przednie, dynamiczny wielokonturowy fotel kierowcy i pasażera)",
+      "System nagłośnienia Burmester 3D surround",
+      "Tempomat adaptacyjny",
+      "Wersja Long",
+      "21-calowe czarne felgi AMG",
+      "Zewnętrzny i wewnętrzny pakiet AMG",
+      "Panoramiczny dwuczęściowy dach szklany",
+      "Pakiet „Rear” (oddzielny panel do sterowania klimatyzacją, wentylacja foteli, tablet do obsługi funkcji samochodu, elektrycznie regulowane fotele z funkcją masażu, zagłówki z miękkimi poduszkami)",
+      "Wzmocnione hamulce (część pakietu AMG)",
+      "Wyświetlacz head-up display z rozszerzoną rzeczywistością",
+      "Reflektory Digital Light",
+      "Wbudowana nawigacja",
+    ],
+    galleryImages: [
+      "/images/MercedesS400dLong/S-Klasa-4-przod.jpg",
+      "/images/MercedesS400dLong/S-Klasa-5-sylwetka.jpg",
+      "/images/MercedesS400dLong/S-Klasa-7-bok.jpg",
+      "/images/MercedesS400dLong/S-Klasa-1-tyl.jpg",
+      "/images/MercedesS400dLong/S-Klasa-2-linia.jpg",
+      "/images/MercedesS400dLong/S-Klasa-8-wnetrze.jpg",
+      "/images/MercedesS400dLong/S-Klasa-10-deska-rozdzielcza.jpg",
+      "/images/MercedesS400dLong/S-Klasa-17-zegary.jpg",
+      "/images/MercedesS400dLong/S-Klasa-11-srodek.jpg",
+      "/images/MercedesS400dLong/S-Klasa-21-felga.jpg",
+    ],
+    pricing: {
+      deposit: 10000,
+      tiers: [
+        { duration: "1 doba", price: 2000 },
+        { duration: "2-3 doby", price: 1700 },
+        { duration: "4-6 dób", price: 1500 },
+        { duration: "7-13 dób", price: 1300 },
+        { duration: "14-29 dób", price: 1000 },
+        { duration: "Miesiąc", price: 19500 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 5.00,
+      relocationFees: {
+        upTo7Days: 500,
+        over7Days: 0,
+      },
+    },
+  },
+
+  {
+    id: 13,
+    make: "BMW",
+    model: "X5 xDrive 40i",
+    imageUrl: "/images/BMWX5xDrive40i/BMW-X5-xDrive40i-sylwetka.jpg",
+    logoUrl: "/images/BMWX5xDrive40i/bmw.svg",
+    specHighlights: {
+      power: "333 KM",
+      acceleration: "5,7 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.0 L",
+      maxSpeed: "250 km/h",
+    },
+    description: `BMW X5, debiutujące w 1999 roku, to pierwszy SUV (określany przez BMW jako SAV - Sport Activity Vehicle) tej marki. Prezentowany model to poliftingowa wersja G05 30d, charakteryzująca się zaostrzonym wyglądem przednich reflektorów i zderzaka oraz "świecącymi nerkami" Iconic Glow. Wnętrze zostało zaktualizowane zgodnie z najnowszymi trendami BMW. Każda wersja X5 po liftingu to miękka hybryda z 48-woltową technologią, oferująca dodatkowe 12 KM i 20 Nm. Wersja 30d generuje 333 KM i 670 Nm, co w połączeniu z 8-biegowym automatem ZF zapewnia doskonałą dynamikę (0-100 km/h w 5,7 s). Egzemplarz wyposażony jest w pakiet sportowy M Pro, 22-calowe felgi M Double-spoke 742 oraz lakier Carbon M. Adaptacyjne zawieszenie i sportowy układ hamulcowy poprawiają właściwości jezdne, a nagłośnienie Harman Kardon Surround Sound dostarcza dodatkowych wrażeń.`,
+    technicalData: {
+      power: "333 KM",
+      torque: "670 Nm",
+      acceleration: "5,7 s",
+      gearbox: "Automatyczna",
+      drive: "4x4",
+      engineType: "3.0 L",
+      maxSpeed: "250 km/h",
+    },
+    equipment: [
+      "Ambientowe podświetlenie",
+      "Asystent parkowania z kamerą cofania",
+      "Klimatyzacja dwustrefowa",
+      "Nagłośnienie Harman Kardon Surround Sound",
+      "Ogrzewanie foteli przednich",
+      "Świecące nerki (Iconic Glow)",
+      "Pakiet sportowy M Pro",
+      "Pakiet sportowy M",
+      "22-calowe aluminiowe obręcze M Double-spoke 742",
+      "Adaptacyjne zawieszenie",
+      "Sportowy układ hamulcowy",
+      "Adaptacyjne reflektory LED",
+      "Wielofunkcyjna kierownica sportowa",
+      "Procedura startu",
+    ],
+    galleryImages: [
+      "/images/BMWX5xDrive40i/BMW-X5-przod.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-sylwetka.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-bok.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-tyl.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-linia.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-wnetrze.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-deska-rozdzielcza.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-widok-felga.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-lampa.jpg",
+      "/images/BMWX5xDrive40i/BMW-X5-wydech.jpg",
+    ],
+    pricing: {
+      deposit: 5000,
+      tiers: [
+        { duration: "1 doba", price: 1200 },
+        { duration: "2-3 doby", price: 1050 },
+        { duration: "4-6 dób", price: 1000 },
+        { duration: "7-13 dób", price: 800 },
+        { duration: "14-29 dób", price: 650 },
+        { duration: "Miesiąc", price: 15500 },
+      ],
+      mileage: [
+        { duration: "do 7 dni", limit: "250 km / doba" },
+        { duration: "od 7 dni do 30 dni", limit: "150 km / doba" },
+        { duration: "od 30 dni", limit: "100 km / doba" },
+      ],
+      additionalMileageCost: 2.50,
+      relocationFees: {
+        upTo7Days: 500,
+        over7Days: 0,
+      },
+    },
+  },
+
+];
+
 module.exports = CARS_DATA;

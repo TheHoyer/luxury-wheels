@@ -1,0 +1,171 @@
+.adminDashboardPageContainer {
+    max-width: 1600px; /* Większa szerokość dla panelu admina */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9fafb;
+}
+
+.headerActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.logoutButton {
+    background-color: #ef4444; /* Czerwony dla wylogowania */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logoutButton:hover {
+    background-color: #dc2626;
+}
+
+
+.loading, .error, .noBookings {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #4b5563;
+}
+.error {
+    color: #ef4444;
+}
+
+.tableResponsive {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.bookingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px; /* Zapewnia, że tabela nie będzie za wąska */
+}
+
+.bookingsTable th,
+.bookingsTable td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+}
+
+.bookingsTable th {
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.bookingsTable tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.statusBadge {
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.statusPending { background-color: #fef3c7; color: #92400e; } /* Żółty */
+.statusConfirmed { background-color: #d1fae5; color: #065f46; } /* Zielony */
+.statusRejected { background-color: #fee2e2; color: #991b1b; } /* Czerwony */
+.statusCompleted { background-color: #e0e7ff; color: #3730a3; } /* Indygo */
+.statusCancelledAdmin, .statusCancelledUser { background-color: #e5e7eb; color: #4b5563; } /* Szary */
+
+
+.actionsCell {
+    min-width: 280px; /* Miejsce na formularz edycji */
+}
+
+.editStatusForm {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.statusSelect {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #d1d9e0;
+    font-size: 0.9rem;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.actionButton {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.actionButton svg {
+    font-size: 0.9em;
+}
+
+.editButton {
+    background-color: #3b82f6; /* Niebieski */
+    color: white;
+}
+.editButton:hover { background-color: #2563eb; }
+
+.saveButton {
+    background-color: #10b981; /* Zielony */
+    color: white;
+}
+.saveButton:hover { background-color: #059669; }
+.saveButton:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.cancelButton {
+    background-color: #6b7280; /* Szary */
+    color: white;
+}
+.cancelButton:hover { background-color: #4b5563; }
+
+@media (max-width: 768px) {
+    .headerActions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .pageTitle {
+        font-size: 1.6rem;
+    }
+}

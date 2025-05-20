@@ -1,0 +1,253 @@
+.pageContainer {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.loadingState {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+.breadcrumb a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.breadcrumb span {
+    color: #333;
+    font-weight: 500;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.bookingSummary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.summarySection {
+    padding: 1rem 0;
+}
+.summarySection:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+@media (min-width: 768px) {
+    .summarySection:not(:last-child) {
+        border-bottom: none;
+        border-right: 1px solid #e0e0e0;
+        padding-right: 2rem;
+    }
+    .summarySection:last-child {
+        padding-left: 2rem; /* Only for last item if there's a border right */
+    }
+    .bookingSummary > .summarySection:nth-child(2) { /* Example for middle element */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .bookingSummary > .summarySection:first-child {
+        padding-right: 2rem;
+    }
+}
+
+
+.summaryTitle {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+.summaryTitle svg {
+    color: var(--color-accent);
+}
+
+.summaryText {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+.summaryText strong {
+    color: #333;
+}
+
+.carImage {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    border: 1px solid #eee;
+}
+
+.totalPrice {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-top: 0.5rem;
+}
+.priceError {
+    color: #d9534f;
+    font-weight: 500;
+}
+.vatInfo {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.3rem;
+}
+
+.formSectionTitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid #eee;
+}
+
+.bookingForm {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95rem;
+}
+.formGroup label svg {
+    color: var(--color-accent);
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="email"]:focus,
+.formGroup input[type="tel"]:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.inputError {
+    border-color: #d9534f !important;
+}
+
+.errorMessage {
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+.submitButton {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: var(--color-accent);
+    color: var(--color-header-scrolled);
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 2rem;
+    min-height: 50px;
+}
+
+.submitButton:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .pageContainer { padding: 1.5rem; margin: 1.5rem; }
+    .pageTitle { font-size: 2rem; }
+    .bookingSummary { grid-template-columns: 1fr; padding: 1.5rem; }
+    .summarySection:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding-right: 0;
+    }
+    .summarySection:last-child,
+    .bookingSummary > .summarySection:nth-child(2),
+    .bookingSummary > .summarySection:first-child {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bookingForm { padding: 1.5rem; }
+    .formSectionTitle { font-size: 1.5rem; }
+}
