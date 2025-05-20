@@ -186,14 +186,14 @@ function CarDetailPage() {
               <div className={styles.thumbnailGrid}>
                 {car.galleryImages.map((image, index) => (
                     <div key={index} className={styles.thumbnailWrapper} onClick={() => openLightbox(index)}>
-                      <img src={image} alt={`Miniatura ${index + 1}`} className={styles.thumbnailImage} />
+                      <img src={image} alt={`${car.make} ${car.model} - Miniatura ${index + 1}`} className={styles.thumbnailImage} />
                     </div>
                 ))}
               </div>
             </div>
 
             <div className={styles.actionButtons}>
-              <Link to="/contact" className={styles.bookingButton}>Zapytaj o Rezerwację</Link>
+              <Link to="/booking/select-dates" className={styles.bookingButton}>Zarezerwuj Teraz</Link>
               <Link to="/fleet" className={styles.backButton}>Wróć do Floty</Link>
             </div>
           </div>
