@@ -1,20 +1,140 @@
-.howItWorksPage{background-color:#fff}
-.fullWidthSection{padding:3rem 0}
-.firstSectionPadding{padding-top:4rem}
-.sectionTitle{font-size:2.2rem;margin-bottom:2.5rem;padding-bottom:.7rem;border-bottom:2px solid #eee;color:#333;text-align:center;font-weight:600}
-.detailsSection{background-color:#fff;padding-top:1px;padding-bottom:1px}
-.detailsTitle{margin-top:4rem;margin-left:1rem;margin-right:1rem;max-width:1200px;margin-left:auto;margin-right:auto}
-.detailBlock{display:flex;align-items:flex-start;gap:2rem;padding:3rem 0}
-.detailBlock .container{display:flex;align-items:flex-start;gap:2rem;width:100%;max-width:1200px;margin:0 auto;padding:0 1rem}
-.detailBlock.altBackground{background-color:#f9f9f9}
-.detailIcon{font-size:3rem;color:var(--color-accent);margin-top:.5rem;flex-shrink:0;width:50px;text-align:center}
-.detailContent{flex-grow:1}
-.detailContent h3{font-size:1.5rem;margin-top:0;margin-bottom:1rem;color:#333;font-weight:600}
-.detailContent p{margin-bottom:1rem;line-height:1.8;color:#555}
-.detailContent ul,.detailContent ol{margin:0;padding-left:1.5rem;line-height:1.8;color:#555}
-.detailContent ul li,.detailContent ol li{margin-bottom:.7rem}
-.detailContent strong{color:#333}
-.ctaSection{padding:4rem 1rem;text-align:center;background-color:var(--color-header-scrolled);color:#fff;margin-bottom:-3rem;position:relative;z-index:1}
-.ctaSection h2{font-size:2.2rem;margin-bottom:1rem;color:#fff;font-weight:700}
-.ctaSection p{font-size:1.1rem;color:#eee;margin-bottom:2rem}
-@media (max-width:768px){.sectionTitle{font-size:1.8rem}.detailsTitle{margin-top:3rem}.detailBlock .container{flex-direction:column;text-align:center;align-items:center;gap:1.5rem;padding:0 1.5rem}.detailBlock{padding:2rem 0}.detailIcon{margin-bottom:1rem;font-size:2.5rem}.detailContent h3{font-size:1.3rem}.detailContent ul,.detailContent ol{padding-left:0;list-style-position:inside;text-align:left}.ctaSection h2{font-size:1.8rem}}
+.howItWorksPage {
+    background-color: #fff;
+}
+.fullWidthSection {
+    padding: 3rem 0;
+}
+.firstSectionPadding {
+    padding-top: 4rem;
+}
+.sectionTitle {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid #eee;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+}
+.detailsSection {
+    background-color: #fff;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.detailsTitle {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detailBlock {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+.detailBlock .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.detailBlock.altBackground {
+    background-color: #f9f9f9;
+}
+.detailIcon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+    width: 50px;
+    text-align: center;
+}
+.detailContent {
+    flex-grow: 1;
+}
+.detailContent h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+.detailContent p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+.detailContent ul,
+.detailContent ol {
+    margin: 0;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+    color: #555;
+}
+.detailContent ul li,
+.detailContent ol li {
+    margin-bottom: 0.7rem;
+}
+.detailContent strong {
+    color: #333;
+}
+.ctaSection {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: var(--color-header-scrolled);
+    color: #fff;
+    margin-bottom: -3rem;
+    position: relative;
+    z-index: 1;
+}
+.ctaSection h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+.ctaSection p {
+    font-size: 1.1rem;
+    color: #eee;
+    margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+    .detailsTitle {
+        margin-top: 3rem;
+    }
+    .detailBlock .container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    .detailBlock {
+        padding: 2rem 0;
+    }
+    .detailIcon {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+    .detailContent h3 {
+        font-size: 1.3rem;
+    }
+    .detailContent ul,
+    .detailContent ol {
+        padding-left: 0;
+        list-style-position: inside;
+        text-align: left;
+    }
+    .ctaSection h2 {
+        font-size: 1.8rem;
+    }
+}

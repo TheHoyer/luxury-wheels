@@ -38,7 +38,6 @@ function Header() {
            <div className={styles.mobileSocialIcons}>
              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-             {/* 🔥 Dodana ikona telefonu */}
              <Link to="/contact" aria-label="Kontakt telefoniczny" onClick={closeMobileMenu}><FaPhoneAlt /></Link>
            </div>
         </div>

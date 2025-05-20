@@ -1,10 +1,8 @@
-// src/index.js lub src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App'; // Lub App.jsx
+import App from './App';
 
-// Dodaj te dwa importy dla react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

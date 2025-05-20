@@ -20,7 +20,7 @@ body {
   padding-top: var(--header-height-initial);
 }
 main {
-  min-height: calc(100vh - var(--header-height-initial) - 100px); /* Przykładowa wysokość stopki */
+  min-height: calc(100vh - var(--header-height-initial) - 100px);
 }
 a {
   color: var(--color-accent);
@@ -46,17 +46,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2.5rem;
   font-weight: 600;
 }
-.container { /* Kontener dla treści w sekcjach full-width */
+.container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem; /* Dodajemy padding, bo sekcja go nie ma */
+  padding-left: 1rem;
   padding-right: 1rem;
 }
 
 .fade-in-section {
   opacity: 0;
-  transform: translateY(20px); /* Można zmniejszyć np. do 10px */
+  transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .fade-in-visible {

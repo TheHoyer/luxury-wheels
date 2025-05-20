@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './HomePage.module.css';
 import CarCard from '../components/CarCard/CarCard';
 import carsData from '../data/cars.js';
-import { FaKey, FaCar, FaCalendarCheck, FaRoad, FaStar, FaThumbsUp, FaShieldAlt, FaGem } from 'react-icons/fa'; // Dodano ikonę FaGem
+import { FaKey, FaCar, FaCalendarCheck, FaRoad, FaStar, FaThumbsUp, FaShieldAlt, FaGem } from 'react-icons/fa';
 import heroBackground from '../assets/images/hero-background.jpg';
 
 function HomePage() {
@@ -24,13 +24,13 @@ function HomePage() {
       <section className={`${styles.aboutSection} ${styles.fullWidthSection}`}>
         <div className="container">
           <h2 className="section-title">Poznaj Luxury Wheels</h2>
-          <div className={styles.aboutLayout}> {/* Nowy layout dla tekstu i ikony */}
+          <div className={styles.aboutLayout}>
             <div className={styles.aboutContent}>
               <p>Luxury Wheels to nie tylko wypożyczalnia – to brama do świata motoryzacyjnych marzeń. Oferujemy starannie wyselekcjonowaną flotę najbardziej pożądanych samochodów sportowych i luksusowych.</p>
               <p>Naszą misją jest dostarczanie niezapomnianych wrażeń i najwyższej jakości obsługi, dbając o każdy detal Twojego wynajmu.</p>
             </div>
             <div className={styles.aboutIconContainer}>
-              <FaGem size={80} className={styles.aboutIcon} /> {/* Dodana ikona */}
+              <FaGem size={80} className={styles.aboutIcon} />
             </div>
           </div>
         </div>

@@ -1,14 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import carsData from '../data/cars.js'; // Upewnij się, że ścieżka jest poprawna
+import carsData from '../data/cars.js';
 import styles from './CarDetailPage.module.css';
-import { FaCheckCircle, FaTachometerAlt, FaBolt, FaCogs, FaUsers, FaGasPump, FaArrowsAltH } from 'react-icons/fa'; // Ikony mogą być nadal używane gdzieś indziej
+import { FaCheckCircle, FaTachometerAlt, FaBolt, FaCogs, FaUsers, FaGasPump, FaArrowsAltH } from 'react-icons/fa';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-// Funkcja getSpecDetails - może być uproszczona, jeśli ikony nie są już potrzebne DLA SPECYFIKACJI
-// ale zostawiam ją, bo może być używana gdzie indziej lub w przyszłości
 const getSpecDetails = (key) => {
   const defaultDetails = { label: key?.charAt(0).toUpperCase() + key?.slice(1) || 'Brak Danych', icon: null };
   if (!key) return defaultDetails;
@@ -109,7 +107,6 @@ function CarDetailPage() {
           </div>
         </section>
 
-        {/* NOWA, WYRÓŻNIONA SEKCJA SPECYFIKACJI */}
         <section className={styles.highlightedSpecsBlock}>
           <div className="container">
             <div className={styles.highlightedSpecsHeader}>
@@ -141,9 +138,6 @@ function CarDetailPage() {
             </div>
           </div>
         </section>
-        {/* KONIEC NOWEJ, WYRÓŻNIONEJ SEKCJI SPECYFIKACJI */}
-
-        {/* Stara sekcja specyfikacji została USUNIĘTA */}
 
         <section className={`${styles.descriptionEquipmentSection} ${styles.fullWidthSection}`}>
           <div className="container">

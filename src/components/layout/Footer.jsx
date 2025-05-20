@@ -10,8 +10,6 @@ function Footer() {
       <div className={styles.container}>
         <div className={styles.footerContent}>
           <div className={styles.companyInfo}>
-             {/* Możesz tu wstawić małe logo jeśli chcesz */}
-             {/* <img src={logoImage} alt="Luxury Wheels Mini Logo" className={styles.footerLogo} /> */}
              <p className={styles.tagline}>Luxury Wheels - Twoje klucze do motoryzacyjnych marzeń.</p>
              <div className={styles.copyright}>
                 © {currentYear} Wszelkie prawa zastrzeżone.
@@ -24,7 +22,6 @@ function Footer() {
             <Link to="/fleet">Flota</Link>
             <Link to="/how-it-works">Jak to działa</Link>
             <Link to="/contact">Kontakt</Link>
-            {/* <Link to="/privacy-policy">Polityka Prywatności</Link> */}
           </nav>
 
           <div className={styles.footerSocial}>

@@ -9,11 +9,10 @@ function FleetPage() {
   const [filterBrands, setFilterBrands] = useState([]); // Stan dla wybranych marek
   const [showFilters, setShowFilters] = useState(false); // Stan dla widoczności filtrów na mobile
 
-  // Pobierz unikalne marki z danych
   const uniqueBrands = useMemo(() => {
     const brands = new Set(carsData.map(car => car.make));
     return Array.from(brands).sort(); // Posortuj alfabetycznie
-  }, []); // Oblicz tylko raz
+  }, []);
 
   const handleBrandChange = (event) => {
     const brand = event.target.value;
@@ -31,13 +30,11 @@ function FleetPage() {
   const filteredAndSortedCars = useMemo(() => {
     let processedCars = [...carsData];
 
-    // 1. Filtrowanie
     if (filterBrands.length > 0) {
       processedCars = processedCars.filter(car => filterBrands.includes(car.make));
     }
 
-    // 2. Sortowanie (na odfiltrowanych danych)
-    const getPrice = (car) => { /* ... (funkcja getPrice bez zmian) ... */ if(car.pricing.hasMultipleOptions){return car.pricing.options?.withDeposit?.tiers?.[0]?.price??0}else{return car.pricing?.tiers?.[0]?.price??0}};
+    const getPrice = (car) => {  if(car.pricing.hasMultipleOptions){return car.pricing.options?.withDeposit?.tiers?.[0]?.price??0}else{return car.pricing?.tiers?.[0]?.price??0}};
     switch (sortOption) {
       case 'nameAsc': processedCars.sort((a, b) => `${a.make} ${a.model}`.localeCompare(`${b.make} ${b.model}`)); break;
       case 'nameDesc': processedCars.sort((a, b) => `${b.make} ${b.model}`.localeCompare(`${a.make} ${a.model}`)); break;
@@ -46,15 +43,13 @@ function FleetPage() {
       default: processedCars.sort((a, b) => a.id - b.id); break;
     }
     return processedCars;
-  }, [sortOption, filterBrands]); // Przelicz przy zmianie sortowania LUB filtrów
+  }, [sortOption, filterBrands]);
 
   return (
     <div className={styles.fleetContainer}>
       <h2 className={styles.pageTitle}>Nasza Flota</h2>
 
-      {/* Panel Filtrów i Sortowania */}
       <div className={styles.controlsPanel}>
-        {/* Filtry Marki */}
         <div className={styles.filterSection}>
           <h3 className={styles.controlTitle} onClick={() => setShowFilters(!showFilters)}>
             <FaFilter /> Filtruj Marki {showFilters ? '▲' : '▼'}
@@ -80,7 +75,6 @@ function FleetPage() {
           </div>
         </div>
 
-        {/* Opcje Sortowania */}
         <div className={styles.sortSection}>
            <h3 className={styles.controlTitle}><FaSortAmountDown /> Sortuj Według</h3>
            <div className={styles.sortButtons}>
@@ -93,7 +87,6 @@ function FleetPage() {
         </div>
       </div>
 
-      {/* Siatka Samochodów */}
       <div className={styles.fleetGrid}>
         {filteredAndSortedCars.length > 0 ? (
           filteredAndSortedCars.map(car => {
